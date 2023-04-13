@@ -15,12 +15,13 @@ public class Entity {
     public int solidAreaDefaultX, solidAreaDefaultY;
     public int positionX, positionY;
     public int speed;
-    public int life;
+    public int blood;
+    public int score;
     public boolean delay = false;
     public int delayCount = 0;
     public boolean collision = false;
     public String direction = " ";
-    public BufferedImage imageEntity;
+    public BufferedImage imageEntity, imageInjured, imageExplode;
     public Bomb bomb;
     public void setPositionX(int positionX) {
         this.positionX = positionX;
@@ -50,7 +51,7 @@ public class Entity {
 
     public void update()
     {
-        if(gp.player.life == 0) gp.overGameStatus = true;
+        if(gp.player.blood <= 0) gp.gameState = gp.overGameState;
     }
     public void draw(Graphics g)
     {

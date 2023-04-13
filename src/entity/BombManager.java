@@ -14,24 +14,35 @@ public class BombManager extends Entity{
      public void createBomb(){
         Bomb bomb = new Bomb(gp);
         bomb.positionX = this.positionX;
-        bomb.speed /= scale;
+//        bomb.speed /= scale;
         gp.listEntity.add(bomb);
     }
-    public void update()
+    public  void setBomb()
     {
-        super.update();
-        if(System.currentTimeMillis() - currentTime > 1000 * scale){
+        if(System.currentTimeMillis() - currentTime > 300 * scale){
             int i = random.nextInt(20);
             setPositionX(gp.unitSize*i);
             createBomb();
             currentTime = System.currentTimeMillis();
         }
         if(!unscale){
-            if(System.currentTimeMillis() - scaleTime > 10000){
+            if(System.currentTimeMillis() - scaleTime > 20000){
+                gp.level++;
                 scale -= 0.1;
                 scaleTime = System.currentTimeMillis();
-                if(scale <= 0.3) unscale = true;
+                if(scale < 0.5 ) unscale = true;
+                gp.player.score += 10;
+                if(gp.level > 5)
+                {
+                    gp.level = 5;
+                }
             }
         }
+    }
+
+    public void update()
+    {
+        super.update();
+        setBomb();
     }
 }

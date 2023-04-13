@@ -12,6 +12,7 @@ public class Player extends Entity{
 
     GetKey getkey;
     public Rectangle solidArea = new Rectangle();
+    public boolean injured = false;
     GamePanel gp;
 
     public Player(GamePanel gp, GetKey gk)
@@ -19,18 +20,66 @@ public class Player extends Entity{
         super(gp);
         this.gp = gp;
         this.getkey = gk;
+        setSolidArea();
+        getImagePlayer();
+        setDefaultVale();
+        setBlood();
+        setScore();
+        direction = "left";
+    }
+
+    public void contactEntity(int i)
+    {
+        if(i != 999)
+        {
+            if(gp.listEntity.get(i).name == "Bomb")
+            {
+                gp.listEntity.remove(i);
+                gp.playSoundEffect(2);
+                injured = true;
+                if(gp.player.delay == false)
+                {
+                    gp.player.blood -= 1;
+                    gp.player.delay = true;
+                }
+            }
+        }
+    }
+    public void setScore()
+    {
+        score = 0;
+    }
+    public void setDefaultVale()
+    {
+        positionX = gp.unitSize * 9;
+        positionY = gp.unitSize * 28;
+        speed = gp.unitSize/5;
+    }
+
+    public void setSolidArea()
+    {
         solidArea.x = 12;
         solidArea.y = 3;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y;
         solidArea.width = 26;
         solidArea.height = 47;
-        life = 10;
-        getImagePlayer();
-        setDefaultVale();
-
-        direction = "left";
     }
+
+    public void setBlood()
+    {
+        blood = 5;
+    }
+    public void getImagePlayer()
+    {
+        try {
+            imageEntity = ImageIO.read(getClass().getResourceAsStream("/player/human.png"));
+            imageInjured = ImageIO.read(getClass().getResourceAsStream("/player/humanInjured.png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public void update()
     {
         collision = false;
@@ -65,36 +114,18 @@ public class Player extends Entity{
             }
         }
     }
-
-    public void contactEntity(int i)
-    {
-        if(i != 999)
-        {
-            if(gp.listEntity.get(i).name == "Bomb")
-            {
-                 gp.listEntity.remove(i);
-            }
-        }
-    }
-
-    public void setDefaultVale()
-    {
-        positionX = gp.unitSize * 9;
-        positionY = gp.unitSize * 28;
-        speed = gp.unitSize/5;
-    }
-    public void getImagePlayer()
-    {
-        try {
-            imageEntity = ImageIO.read(getClass().getResourceAsStream("/player/human.png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
     public void draw(Graphics g)
     {
-        BufferedImage image;
-        image = imageEntity;
+        BufferedImage image = null;
+        if(injured == true)
+        {
+            image = imageInjured;
+            injured = false;
+        }
+        else
+        {
+            image = imageEntity;
+        }
         g.drawImage(image, positionX, positionY ,gp.unitSizePlayer,gp.unitSizePlayer,null);
     }
 

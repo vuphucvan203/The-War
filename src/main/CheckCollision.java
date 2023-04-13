@@ -52,6 +52,24 @@ public class CheckCollision {
         gp.player.solidArea.x = gp.player.solidAreaDefaultX;
         gp.player.solidArea.y = gp.player.solidAreaDefaultY;
     }
+
+    public boolean checkLimitBottom(Entity entity)
+    {
+        boolean contact = false;
+        // Get entity's solid area position
+        entity.solidArea.x = entity.positionX + entity.solidArea.x;
+        entity.solidArea.y = entity.positionY + entity.solidArea.y;
+
+        entity.solidArea.y += entity.speed;
+
+        if(entity.solidArea.intersects(gp.bottomScreen.solidArea))
+        {
+            contact = true;
+        }
+        entity.solidArea.x = entity.solidAreaDefaultX;
+        entity.solidArea.y = entity.solidAreaDefaultY;
+        return contact;
+    }
     public int checkEntity(ArrayList<Entity> target)
     {
         int index = 999;
@@ -95,11 +113,11 @@ public class CheckCollision {
     public boolean checkPlayer(Entity entity)
     {
                 boolean contact = false;
-                //Get entity's solid area position
+                //Get player's solid area position
                 gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
                 gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
 
-                //Get target's solid area position
+                //Get entity's solid area position
                 entity.solidArea.x = entity.positionX + entity.solidArea.x;
                 entity.solidArea.y = entity.positionY + entity.solidArea.y;
 
