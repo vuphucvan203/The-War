@@ -13,8 +13,22 @@ public class Items extends Entity{
     public Items(GamePanel gp) {
         super(gp);
         getImageItems();
+        setSolidArea();
     }
 
+    private void setSolidArea()
+    {
+        solidArea.x = 0;
+        solidArea.y = 0;
+        solidArea.width = 25;
+        solidArea.height = 25;
+        positionY = gp.unitSize * 29;
+    }
+
+    public void createItems()
+    {
+        positionX = random.nextInt(19) * gp.unitSize;
+    }
     private void getImageItems()
     {
         try {
@@ -28,7 +42,7 @@ public class Items extends Entity{
     {
         BufferedImage image;
         image = imageEntity;
-        g.drawImage(image,gp.unitSize * 2, gp.unitSize * 28, gp.unitSizePlayer, gp.unitSizePlayer, null);
+        g.drawImage(image,positionX, positionY, gp.unitSize, gp.unitSize, null);
     }
 
 }

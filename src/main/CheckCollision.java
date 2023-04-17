@@ -139,4 +139,32 @@ public class CheckCollision {
                 gp.player.solidArea.y = gp.player.solidAreaDefaultY;
                 return contact;
     }
+    public boolean checkItems()
+    {
+        boolean takeItems = false;
+        //Get player's solid area position
+        gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
+        gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
+
+        //Get entity's solid area position
+        gp.items.solidArea.x = gp.items.positionX + gp.items.solidArea.x;
+        gp.items.solidArea.y = gp.items.positionY + gp.items.solidArea.y;
+
+        switch (gp.player.direction)
+        {
+            case "left": gp.player.solidArea.x -= gp.player.speed;break;
+            case "right": gp.player.solidArea.x += gp.player.speed;break;
+        }
+
+        if(gp.player.solidArea.intersects(gp.items.solidArea))
+        {
+            gp.player.collision = true;
+            takeItems = true;
+        }
+        gp.items.solidArea.x = gp.items.solidAreaDefaultX;
+        gp.items.solidArea.y = gp.items.solidAreaDefaultY;
+        gp.player.solidArea.x = gp.player.solidAreaDefaultX;
+        gp.player.solidArea.y = gp.player.solidAreaDefaultY;
+        return takeItems;
+    }
 }

@@ -21,9 +21,38 @@ public class GetKey implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
 
+        //Move
         if(code == KeyEvent.VK_A || code == KeyEvent.VK_LEFT) moveLeft = true;
         if(code == KeyEvent.VK_D || code == KeyEvent.VK_RIGHT) moveRight = true;
-        if(code == KeyEvent.VK_SPACE) gp.gameState = gp.playGameState;
+
+        //Menu state
+        if(gp.gameState == gp.menuGameState)
+        {
+            if(code == KeyEvent.VK_UP)
+            {
+                gp.ui.flagNum--;
+                if(gp.ui.flagNum < 0)
+                {
+                    gp.ui.flagNum = 2;
+                }
+            }
+            if(code == KeyEvent.VK_DOWN)
+            {
+                gp.ui.flagNum++;
+                if(gp.ui.flagNum > 2)
+                {
+                    gp.ui.flagNum = 0;
+                }
+            }
+            if(code == KeyEvent.VK_ENTER)
+            {
+                if(gp.ui.flagNum == 0) gp.gameState = gp.playGameState;
+                if(gp.ui.flagNum == 1) gp.gameDiary = true;
+                if(gp.ui.flagNum == 2) gp.gameState = gp.quitGameState;
+            }
+        }
+
+        //Pause state
         if(code == KeyEvent.VK_P )
         {
             if(gp.gameState == gp.playGameState)
@@ -35,8 +64,47 @@ public class GetKey implements KeyListener {
                 gp.gameState = gp.playGameState;
             }
         }
-        if(code == KeyEvent.VK_ENTER) gp.gameState = gp.resetGameState;
+
+        //Over game state
+        if(gp.gameState == gp.overGameState)
+        {
+            if(code == KeyEvent.VK_UP)
+            {
+                gp.ui.flagNum--;
+                if(gp.ui.flagNum < 0)
+                {
+                    gp.ui.flagNum = 2;
+                }
+            }
+            if(code == KeyEvent.VK_DOWN)
+            {
+                gp.ui.flagNum++;
+                if(gp.ui.flagNum > 2)
+                {
+                    gp.ui.flagNum = 0;
+                }
+            }
+            if(code == KeyEvent.VK_ENTER)
+            {
+                if(gp.ui.flagNum == 0) gp.save = true;
+                if(gp.ui.flagNum == 1) gp.gameState = gp.resetGameState;
+                if(gp.ui.flagNum == 2) gp.gameState = gp.quitGameState;
+            }
+        }
+        if(code == KeyEvent.VK_S) gp.save = true;
+
         if(code == KeyEvent.VK_ESCAPE) gp.gameState = gp.quitGameState;
+        if(code == KeyEvent.VK_G)
+        {
+            if(gp.gameDiary == true)
+            {
+                gp.gameDiary = false;
+            }
+            else if(gp.gameDiary == false)
+            {
+                gp.gameDiary = true;
+            }
+        }
     }
 
     @Override

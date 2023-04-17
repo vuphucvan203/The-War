@@ -3,6 +3,7 @@ import entity.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class GamePanel extends JPanel implements Runnable{
@@ -20,7 +21,9 @@ public class GamePanel extends JPanel implements Runnable{
     public int overGameState = 3;
     public int resetGameState = 4;
     public int quitGameState = 5;
-    public int level = 1;
+    public boolean save = false;
+    public boolean gameDiary = false;
+
 
 
     int FPS = 60;
@@ -34,7 +37,8 @@ public class GamePanel extends JPanel implements Runnable{
     public LimitRightScreen rightScreen = new LimitRightScreen(this);
     public LimitBottomScreen bottomScreen = new LimitBottomScreen(this);
     public UI ui = new UI(this);
-    public Sound sound = new Sound();
+    public Database data = new Database(this);
+    public soundThread sound = new soundThread();
     public Background background = new Background(this);
 
     public ArrayList<Entity> listEntity = new ArrayList<Entity>();
@@ -50,24 +54,42 @@ public class GamePanel extends JPanel implements Runnable{
         this.setFocusable(true);
         this.setupGame();
         this.startGameThread();
+        this.startSoundThread();
+        if(save == true)
+        {
+            this.save();
+        }
     }
 
     public void setupGame()
     {
         gameState = menuGameState;
-        playMusic(0);
     }
 
     public void playGame()
     {
         gameState = playGameState;
+        items.createItems();
     }
     public void startGameThread()
     {
         gameThread = new Thread(this);
         gameThread.start();
     }
+    public void startSoundThread()
+    {
+        sound.start();
+    }
 
+    public void save()
+    {
+        try {
+            data.insert();
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        quit();
+    }
     public void reset()
     {
         playGame();
@@ -75,9 +97,12 @@ public class GamePanel extends JPanel implements Runnable{
         player.setBlood();
         player.setScore();
         listEntity.clear();
-        level = 1;
     }
 
+    public void quit()
+    {
+        System.exit(0);
+    }
     public void run()
     {
         double drawInterval = 1000000000/FPS;
@@ -110,6 +135,7 @@ public class GamePanel extends JPanel implements Runnable{
             }
         }
     }
+
     public void update()
     {
         if(gameState == playGameState)
@@ -125,6 +151,11 @@ public class GamePanel extends JPanel implements Runnable{
         {
             //null
         }
+        if(save == true)
+        {
+            save();
+            save = false;
+        }
 
         if(gameState == resetGameState)
         {
@@ -134,11 +165,6 @@ public class GamePanel extends JPanel implements Runnable{
         {
             quit();
         }
-    }
-
-    private void quit()
-    {
-        gameState = menuGameState;
     }
 
     public void paintComponent(Graphics g)
@@ -157,6 +183,10 @@ public class GamePanel extends JPanel implements Runnable{
             items.drawItems(g);
             ui.draw(g);
         }
+        if(gameDiary == true)
+        {
+
+        }
     }
     public void drawBomb(Graphics g)
     {
@@ -174,16 +204,6 @@ public class GamePanel extends JPanel implements Runnable{
         }
     }
 
-    public void playMusic(int i)
-    {
-        sound.setFile(i);
-        sound.play();
-        sound.loop();
-    }
-    public void stopMusic()
-    {
-        sound.stop();
-    }
     public void playSoundEffect(int i)
     {
         sound.setFile(i);

@@ -7,19 +7,27 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
 import java.net.URL;
 
-public class Sound {
+public class soundThread extends Thread{
 
     Clip clip;
 
     URL soundURL[] = new URL[10];
 
-    public Sound()
+    public soundThread()
     {
         soundURL[0] = getClass().getResource("/sound/gameMusic.wav");
         soundURL[1] = getClass().getResource("/sound/BombExplode.wav");
         soundURL[2] = getClass().getResource("/sound/HumanInjured.wav");
+        soundURL[3] = getClass().getResource("/sound/TakeItems.wav");
     }
 
+    @Override
+    public void run()
+    {
+        setFile(0);
+        play();
+        loop();
+    }
     public void setFile(int i)
     {
         try {
@@ -37,8 +45,8 @@ public class Sound {
     {
         clip.loop(Clip.LOOP_CONTINUOUSLY);
     }
-    public void stop()
-    {
-        clip.stop();
-    }
+//    public void stop()
+//    {
+//        clip.stop();
+//    }
 }

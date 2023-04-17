@@ -19,7 +19,8 @@ public class BombManager extends Entity{
     }
     public  void setBomb()
     {
-        if(System.currentTimeMillis() - currentTime > 300 * scale){
+        if(System.currentTimeMillis() - currentTime > 300 * scale)
+        {
             int i = random.nextInt(20);
             setPositionX(gp.unitSize*i);
             createBomb();
@@ -27,15 +28,9 @@ public class BombManager extends Entity{
         }
         if(!unscale){
             if(System.currentTimeMillis() - scaleTime > 20000){
-                gp.level++;
                 scale -= 0.1;
                 scaleTime = System.currentTimeMillis();
                 if(scale < 0.5 ) unscale = true;
-                gp.player.score += 10;
-                if(gp.level > 5)
-                {
-                    gp.level = 5;
-                }
             }
         }
     }

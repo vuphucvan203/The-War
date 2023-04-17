@@ -92,6 +92,7 @@ public class Player extends Entity{
             gp.checkCollision.checkLimitLeft();
             gp.checkCollision.checkLimitRight();
             int entityIndex = gp.checkCollision.checkEntity(gp.listEntity);
+            boolean takeItems = gp.checkCollision.checkItems();
             contactEntity(entityIndex);
             //Player can move
             if(collision == false)
@@ -101,6 +102,15 @@ public class Player extends Entity{
                     case "left": positionX -= speed; break;
                     case "right": positionX += speed; break;
                 }
+            }
+
+            //Take items
+            if(takeItems == true)
+            {
+                gp.player.score += 1;
+                gp.playSoundEffect(3);
+                gp.items.createItems();
+                takeItems = false;
             }
         }
         //Delay
@@ -113,6 +123,8 @@ public class Player extends Entity{
                 delayCount = 0;
             }
         }
+
+
     }
     public void draw(Graphics g)
     {
