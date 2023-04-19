@@ -48,7 +48,6 @@ public class UI {
     {
         String theWar = "The War";
         String play = "Play";
-        String gameDiary = "Game Diary";
         String quit = "Quit";
 
         g.setColor(new Color(0,0,0,200));
@@ -67,17 +66,11 @@ public class UI {
             g.drawString(">", getXTextCenter(play, g) - gp.unitSize, gp.unitSize * 14);
         }
 
-        //String Game Diary
-        g.drawString(gameDiary, getXTextCenter(gameDiary, g), gp.unitSize * 16);
+        //String Quit
+        g.drawString(quit, getXTextCenter(quit, g), gp.unitSize * 16);
         if(flagNum == 1)
         {
-            g.drawString(">", getXTextCenter(gameDiary, g) - gp.unitSize, gp.unitSize * 16);
-        }
-        //String Quit
-        g.drawString(quit, getXTextCenter(quit, g), gp.unitSize * 18);
-        if(flagNum == 2)
-        {
-            g.drawString(">", getXTextCenter(quit, g) - gp.unitSize, gp.unitSize * 18);
+            g.drawString(">", getXTextCenter(quit, g) - gp.unitSize, gp.unitSize * 16);
         }
     }
 

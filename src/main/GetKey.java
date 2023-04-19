@@ -32,13 +32,13 @@ public class GetKey implements KeyListener {
                 gp.ui.setFlagNum(gp.ui.getFlagNum() - 1);
                 if(gp.ui.getFlagNum() < 0)
                 {
-                    gp.ui.setFlagNum(2);
+                    gp.ui.setFlagNum(1);
                 }
             }
             if(code == KeyEvent.VK_DOWN)
             {
                 gp.ui.setFlagNum(gp.ui.getFlagNum() + 1);
-                if(gp.ui.getFlagNum() > 2)
+                if(gp.ui.getFlagNum() > 1)
                 {
                     gp.ui.setFlagNum(0);
                 }
@@ -46,8 +46,7 @@ public class GetKey implements KeyListener {
             if(code == KeyEvent.VK_ENTER)
             {
                 if(gp.ui.getFlagNum() == 0) gp.gameState = gp.playGameState;
-                if(gp.ui.getFlagNum() == 1) gp.gameDiary = true;
-                if(gp.ui.getFlagNum() == 2) gp.gameState = gp.quitGameState;
+                if(gp.ui.getFlagNum() == 1) gp.gameState = gp.quitGameState;
             }
         }
 
