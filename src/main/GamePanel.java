@@ -3,6 +3,7 @@ import entity.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -88,7 +89,16 @@ public class GamePanel extends JPanel implements Runnable{
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        quit();
+        try {
+            data.exportToFile();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        gameState = menuGameState;
     }
     public void reset()
     {
@@ -170,7 +180,6 @@ public class GamePanel extends JPanel implements Runnable{
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
-//        draw(g);
         background.drawBackground(g);
         if(gameState == menuGameState)
         {
@@ -194,19 +203,5 @@ public class GamePanel extends JPanel implements Runnable{
         {
             if(listEntity.get(i) != null) listEntity.get(i).draw(g);
         }
-    }
-    public void draw(Graphics g)
-    {
-        for(int i = 0; i < screenHeight; i++)
-        {
-            g.drawLine(i*unitSize, 0, i*unitSize, screenHeight);
-            g.drawLine(0, i*unitSize, screenWidth, i*unitSize);
-        }
-    }
-
-    public void playSoundEffect(int i)
-    {
-        sound.setFile(i);
-        sound.play();
     }
 }

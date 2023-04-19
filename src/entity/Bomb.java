@@ -10,16 +10,27 @@ import java.io.IOException;
 public class Bomb extends Entity{
 
     GamePanel gp;
-    public boolean explode = false;
+    private boolean explode = false;
+    private BufferedImage imageExplode, imageBomb;
+    private Rectangle solidArea = new Rectangle();
 
+    @Override
+    public Rectangle getSolidArea() {
+        return solidArea;
+    }
+
+    @Override
+    public void setSolidArea(Rectangle solidArea) {
+        this.solidArea = solidArea;
+    }
 
     public Bomb(GamePanel gp)
     {
         super(gp);
-        name = "Bomb";
+        setName("Bomb");
         this.gp = gp;
         getImageBomb();
-        speed = gp.unitSize/5;
+        setSpeed(gp.unitSize/5);
         setSolidArea();
     }
 
@@ -28,42 +39,42 @@ public class Bomb extends Entity{
         solidArea = new Rectangle();
         solidArea.x = 2;
         solidArea.y = 0;
-        solidAreaDefaultX = solidArea.x;
-        solidAreaDefaultY = solidArea.y;
+        setSolidAreaDefaultX(solidArea.x);
+        setSolidAreaDefaultY(solidArea.y);
         solidArea.width = 21;
         solidArea.height = 25;
-        positionY = -25;
+        setPositionY(-25);
     }
 
     public void getImageBomb()
     {
         try {
-            imageEntity = ImageIO.read(getClass().getResourceAsStream("/weapon/bomb.png"));
+            imageBomb = ImageIO.read(getClass().getResourceAsStream("/weapon/bomb.png"));
             imageExplode = ImageIO.read(getClass().getResourceAsStream("/weapon/bombExplode.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
     public void update() {
-       collision = false;
+       setCollision(false);
        //Collision
        boolean contactPlayer = gp.checkCollision.checkPlayer(this);
        boolean contactBottom = gp.checkCollision.checkLimitBottom(this);
 
 
-        if(collision == false)
+        if(isCollision() == false)
         {
-            positionY += speed;
+            setPositionY(getPositionY() + getSpeed());
         }
         if(contactPlayer == true)
         {
-            gp.player.injured = true;
+            gp.player.setInjured(true);
             explode = true;
-            gp.playSoundEffect(2);
-            if(gp.player.delay == false)
+            gp.sound.playSoundEffect(2);
+            if(gp.player.isDelay() == false)
             {
-                gp.player.blood -= 1;
-                gp.player.delay = true;
+                gp.player.setBlood(gp.player.getBlood() - 1);
+                gp.player.setDelay(true);
             }
         }
         if(contactBottom == true)
@@ -79,12 +90,12 @@ public class Bomb extends Entity{
         {
             image2 = imageExplode;
             explode = false;
-            g.drawImage(image2, positionX, positionY, gp.unitSizeBombExplode, gp.unitSizeBombExplode, null);
+            g.drawImage(image2, getPositionX(), getPositionY(), gp.unitSizeBombExplode, gp.unitSizeBombExplode, null);
         }
         else
         {
-            image = imageEntity;
-            g.drawImage(image, positionX, positionY ,gp.unitSize,gp.unitSize,null);
+            image = imageBomb;
+            g.drawImage(image, getPositionX(), getPositionY() ,gp.unitSize,gp.unitSize,null);
         }
     }
 }

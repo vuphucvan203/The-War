@@ -6,7 +6,17 @@ import java.awt.*;
 
 public class LimitLeftScreen extends Entity{
 
-    public Rectangle solidArea = new Rectangle();
+    @Override
+    public Rectangle getSolidArea() {
+        return solidArea;
+    }
+
+    @Override
+    public void setSolidArea(Rectangle solidArea) {
+        this.solidArea = solidArea;
+    }
+
+    private Rectangle solidArea = new Rectangle();
 
     public LimitLeftScreen(GamePanel gp) {
         super(gp);

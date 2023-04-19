@@ -10,19 +10,60 @@ public class Entity {
     GamePanel gp;
 
     Random random = new Random();
-    public Rectangle solidArea = new Rectangle();
-    public String name;
-    public int solidAreaDefaultX, solidAreaDefaultY;
-    public int positionX, positionY;
-    public int speed;
-    public int blood;
-    public int score;
-    public boolean delay = false;
-    public int delayCount = 0;
-    public boolean collision = false;
-    public String direction = " ";
-    public BufferedImage imageEntity, imageInjured, imageExplode;
-    public Bomb bomb;
+    private Rectangle solidArea = new Rectangle();
+    private int solidAreaDefaultX, solidAreaDefaultY;
+    private int positionX, positionY;
+    private String name;
+
+    private int speed;
+
+    public Rectangle getSolidArea() {
+        return solidArea;
+    }
+
+    public void setSolidArea(Rectangle solidArea) {
+        this.solidArea = solidArea;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSolidAreaDefaultX() {
+        return solidAreaDefaultX;
+    }
+
+    public void setSolidAreaDefaultX(int solidAreaDefaultX) {
+        this.solidAreaDefaultX = solidAreaDefaultX;
+    }
+
+    public int getSolidAreaDefaultY() {
+        return solidAreaDefaultY;
+    }
+
+    public void setSolidAreaDefaultY(int solidAreaDefaultY) {
+        this.solidAreaDefaultY = solidAreaDefaultY;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public boolean isCollision() {
+        return collision;
+    }
+
+    public void setCollision(boolean collision) {
+        this.collision = collision;
+    }
+
+    private boolean collision = false;
+    Bomb bomb;
+
     public void setPositionX(int positionX) {
         this.positionX = positionX;
     }
@@ -51,7 +92,7 @@ public class Entity {
 
     public void update()
     {
-        if(gp.player.blood <= 0) gp.gameState = gp.overGameState;
+        if(gp.player.getBlood() <= 0) gp.gameState = gp.overGameState;
     }
     public void draw(Graphics g)
     {

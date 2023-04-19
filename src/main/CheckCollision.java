@@ -17,57 +17,57 @@ public class CheckCollision {
     public void checkLimitLeft()
     {
         // Get player's solid area position
-        gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
-        gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
+        gp.player.getSolidArea().x = gp.player.getPositionX() + gp.player.getSolidArea().x;
+        gp.player.getSolidArea().y = gp.player.getPositionY() + gp.player.getSolidArea().y;
 
-        switch (gp.player.direction)
+        switch (gp.player.getDirection())
         {
-            case "left": gp.player.solidArea.x -= gp.player.speed;
-            case "right": gp.player.solidArea.x += gp.player.speed;
+            case "left": gp.player.getSolidArea().x -= gp.player.getSpeed();
+            case "right": gp.player.getSolidArea().x += gp.player.getSpeed();
         }
 
-        if(gp.player.solidArea.intersects(gp.leftScreen.solidArea))
+        if(gp.player.getSolidArea().intersects(gp.leftScreen.getSolidArea()))
         {
-                gp.player.collision = true;
+                gp.player.setCollision(true);
         }
-        gp.player.solidArea.x = gp.player.solidAreaDefaultX;
-        gp.player.solidArea.y = gp.player.solidAreaDefaultY;
+        gp.player.getSolidArea().x = gp.player.getSolidAreaDefaultX();
+        gp.player.getSolidArea().y = gp.player.getSolidAreaDefaultY();
     }
     public void checkLimitRight()
     {
         // Get player's solid area position
-        gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
-        gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
+        gp.player.getSolidArea().x = gp.player.getPositionX() + gp.player.getSolidArea().x;
+        gp.player.getSolidArea().y = gp.player.getPositionX() + gp.player.getSolidArea().y;
 
-        switch (gp.player.direction)
+        switch (gp.player.getDirection())
         {
-            case "left": gp.player.solidArea.x -= gp.player.speed;break;
-            case "right": gp.player.solidArea.x += gp.player.speed;break;
+            case "left": gp.player.getSolidArea().x -= gp.player.getSpeed();break;
+            case "right": gp.player.getSolidArea().x += gp.player.getSpeed();break;
         }
 
-        if(gp.player.solidArea.intersects(gp.rightScreen.solidArea))
+        if(gp.player.getSolidArea().intersects(gp.rightScreen.getSolidArea()))
         {
-                gp.player.collision = true;
+                gp.player.setCollision(true);
         }
-        gp.player.solidArea.x = gp.player.solidAreaDefaultX;
-        gp.player.solidArea.y = gp.player.solidAreaDefaultY;
+        gp.player.getSolidArea().x = gp.player.getSolidAreaDefaultX();
+        gp.player.getSolidArea().y = gp.player.getSolidAreaDefaultY();
     }
 
     public boolean checkLimitBottom(Entity entity)
     {
         boolean contact = false;
         // Get entity's solid area position
-        entity.solidArea.x = entity.positionX + entity.solidArea.x;
-        entity.solidArea.y = entity.positionY + entity.solidArea.y;
+        entity.getSolidArea().x = entity.getPositionX() + entity.getSolidArea().x;
+        entity.getSolidArea().y = entity.getPositionY() + entity.getSolidArea().y;
 
-        entity.solidArea.y += entity.speed;
+        entity.getSolidArea().y += entity.getSpeed();
 
-        if(entity.solidArea.intersects(gp.bottomScreen.solidArea))
+        if(entity.getSolidArea().intersects(gp.bottomScreen.getSolidArea()))
         {
             contact = true;
         }
-        entity.solidArea.x = entity.solidAreaDefaultX;
-        entity.solidArea.y = entity.solidAreaDefaultY;
+        entity.getSolidArea().x = entity.getSolidAreaDefaultX();
+        entity.getSolidArea().y = entity.getSolidAreaDefaultY();
         return contact;
     }
     public int checkEntity(ArrayList<Entity> target)
@@ -78,32 +78,32 @@ public class CheckCollision {
             if(target.get(i) != null)
             {
                 //Get entity's solid area position
-                gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
-                gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
+                gp.player.getSolidArea().x = gp.player.getPositionX() + gp.player.getSolidArea().x;
+                gp.player.getSolidArea().y = gp.player.getPositionY() + gp.player.getSolidArea().y;
 
                 //Get target's solid area position
-                target.get(i).solidArea.x = target.get(i).positionX + target.get(i).solidArea.x;
-                target.get(i).solidArea.y = target.get(i).positionY + target.get(i).solidArea.y;
+                target.get(i).getSolidArea().x = target.get(i).getPositionX() + target.get(i).getSolidArea().x;
+                target.get(i).getSolidArea().y = target.get(i).getPositionY() + target.get(i).getSolidArea().y;
 
-                switch (gp.player.direction)
+                switch (gp.player.getDirection())
                 {
-                    case "left": gp.player.solidArea.x -= gp.player.speed;
-                    case "right": gp.player.solidArea.x += gp.player.speed;
+                    case "left": gp.player.getSolidArea().x -= gp.player.getSpeed();
+                    case "right": gp.player.getSolidArea().x += gp.player.getSpeed();
                 }
-                target.get(i).solidArea.y += target.get(i).speed;
+                target.get(i).getSolidArea().y += target.get(i).getSpeed();
 
-                if(gp.player.solidArea.intersects(target.get(i).solidArea))
+                if(gp.player.getSolidArea().intersects(target.get(i).getSolidArea()))
                 {
                     if(target.get(i) != gp.player)
                     {
-                        gp.player.collision = true;
+                        gp.player.setCollision(true);
                         index = i;
                     }
                 }
-                gp.player.solidArea.x = gp.player.solidAreaDefaultX;
-                gp.player.solidArea.y = gp.player.solidAreaDefaultY;
-                target.get(i).solidArea.x = target.get(i).solidAreaDefaultX;
-                target.get(i).solidArea.y = target.get(i).solidAreaDefaultY;
+                gp.player.getSolidArea().x = gp.player.getSolidAreaDefaultX();
+                gp.player.getSolidArea().y = gp.player.getSolidAreaDefaultY();
+                target.get(i).getSolidArea().x = target.get(i).getSolidAreaDefaultX();
+                target.get(i).getSolidArea().y = target.get(i).getSolidAreaDefaultY();
             }
         }
         return index;
@@ -114,57 +114,57 @@ public class CheckCollision {
     {
                 boolean contact = false;
                 //Get player's solid area position
-                gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
-                gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
+                gp.player.getSolidArea().x = gp.player.getPositionX() + gp.player.getSolidArea().x;
+                gp.player.getSolidArea().y = gp.player.getPositionY() + gp.player.getSolidArea().y;
 
                 //Get entity's solid area position
-                entity.solidArea.x = entity.positionX + entity.solidArea.x;
-                entity.solidArea.y = entity.positionY + entity.solidArea.y;
+                entity.getSolidArea().x = entity.getPositionX() + entity.getSolidArea().x;
+                entity.getSolidArea().y = entity.getPositionY() + entity.getSolidArea().y;
 
-                switch (gp.player.direction)
+                switch (gp.player.getDirection())
                 {
-                    case "left": gp.player.solidArea.x -= gp.player.speed;break;
-                    case "right": gp.player.solidArea.x += gp.player.speed;break;
+                    case "left": gp.player.getSolidArea().x -= gp.player.getSpeed();break;
+                    case "right": gp.player.getSolidArea().x += gp.player.getSpeed();break;
                 }
-                entity.solidArea.y += entity.speed;
+                entity.getSolidArea().y += entity.getSpeed();
 
-                if(entity.solidArea.intersects(gp.player.solidArea))
+                if(entity.getSolidArea().intersects(gp.player.getSolidArea()))
                 {
-                    entity.collision = true;
+                    entity.setCollision(true);
                     contact = true;
                 }
-                entity.solidArea.x = entity.solidAreaDefaultX;
-                entity.solidArea.y = entity.solidAreaDefaultY;
-                gp.player.solidArea.x = gp.player.solidAreaDefaultX;
-                gp.player.solidArea.y = gp.player.solidAreaDefaultY;
+                entity.getSolidArea().x = entity.getSolidAreaDefaultX();
+                entity.getSolidArea().y = entity.getSolidAreaDefaultY();
+                gp.player.getSolidArea().x = gp.player.getSolidAreaDefaultX();
+                gp.player.getSolidArea().y = gp.player.getSolidAreaDefaultY();
                 return contact;
     }
     public boolean checkItems()
     {
         boolean takeItems = false;
         //Get player's solid area position
-        gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
-        gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
+        gp.player.getSolidArea().x = gp.player.getPositionX() + gp.player.getSolidArea().x;
+        gp.player.getSolidArea().y = gp.player.getPositionY() + gp.player.getSolidArea().y;
 
         //Get entity's solid area position
-        gp.items.solidArea.x = gp.items.positionX + gp.items.solidArea.x;
-        gp.items.solidArea.y = gp.items.positionY + gp.items.solidArea.y;
+        gp.items.getSolidArea().x = gp.items.getPositionX() + gp.items.getSolidArea().x;
+        gp.items.getSolidArea().y = gp.items.getPositionY() + gp.items.getSolidArea().y;
 
-        switch (gp.player.direction)
+        switch (gp.player.getDirection())
         {
-            case "left": gp.player.solidArea.x -= gp.player.speed;break;
-            case "right": gp.player.solidArea.x += gp.player.speed;break;
+            case "left": gp.player.getSolidArea().x -= gp.player.getSpeed();break;
+            case "right": gp.player.getSolidArea().x += gp.player.getSpeed();break;
         }
 
-        if(gp.player.solidArea.intersects(gp.items.solidArea))
+        if(gp.player.getSolidArea().intersects(gp.items.getSolidArea()))
         {
-            gp.player.collision = true;
+            gp.player.setCollision(true);
             takeItems = true;
         }
-        gp.items.solidArea.x = gp.items.solidAreaDefaultX;
-        gp.items.solidArea.y = gp.items.solidAreaDefaultY;
-        gp.player.solidArea.x = gp.player.solidAreaDefaultX;
-        gp.player.solidArea.y = gp.player.solidAreaDefaultY;
+        gp.items.getSolidArea().x = gp.items.getSolidAreaDefaultX();
+        gp.items.getSolidArea().y = gp.items.getSolidAreaDefaultY();
+        gp.player.getSolidArea().x = gp.player.getSolidAreaDefaultX();
+        gp.player.getSolidArea().y = gp.player.getSolidAreaDefaultY();
         return takeItems;
     }
 }

@@ -11,7 +11,9 @@ public class UI {
     Font arial20, arial30, arial40, arial50, arial70;
     Graphics g;
     GamePanel gp;
-    public int flagNum;
+
+    private int flagNum;
+
     public UI(GamePanel gp)
     {
         this.gp = gp;
@@ -20,6 +22,13 @@ public class UI {
         arial40 = new Font("Arial",Font.PLAIN,40);
         arial50 = new Font("Arial", Font.BOLD, 50);
         arial70 = new Font("Arial", Font.BOLD, 70);
+    }
+
+    public int getFlagNum() {
+        return flagNum;
+    }
+    public void setFlagNum(int flagNum) {
+        this.flagNum = flagNum;
     }
 
     public void draw(Graphics g)
@@ -50,7 +59,6 @@ public class UI {
         g.setColor(Color.WHITE);
         g.drawString(theWar, getXTextCenter(theWar, g), gp.unitSize * 5);
 
-
         //String Play
         g.setFont(arial30);
         g.drawString(play, getXTextCenter(play,g), gp.unitSize * 14);
@@ -58,6 +66,7 @@ public class UI {
         {
             g.drawString(">", getXTextCenter(play, g) - gp.unitSize, gp.unitSize * 14);
         }
+
         //String Game Diary
         g.drawString(gameDiary, getXTextCenter(gameDiary, g), gp.unitSize * 16);
         if(flagNum == 1)
@@ -75,8 +84,8 @@ public class UI {
     public  void drawPlayerIndex(Graphics g)
     {
 
-        String textBlood = "Blood: " + String.valueOf(gp.player.blood);
-        String textScore = "Score: " + String.valueOf(gp.player.score);
+        String textBlood = "Blood: " + String.valueOf(gp.player.getBlood());
+        String textScore = "Score: " + String.valueOf(gp.player.getScore());
 
         //Draw blood
         g.setFont(arial20);
@@ -89,7 +98,7 @@ public class UI {
     public void drawPauseGame(Graphics g)
     {
         String pause = "Pause";
-        String continuePlay = "Press P to continue";
+        String continuePlay = "P to continue";
         g.setColor(new Color(100,100,100,150));
         g.fillRect(0,0, gp.screenWidth,gp.screenHeight);
 
@@ -105,7 +114,7 @@ public class UI {
     public void drawGameOver(Graphics g)
     {
         String overGame = "Game Over";
-        String score = "Score: " + gp.player.score;
+        String score = "Score: " + gp.player.getScore();
         String save = "Save game";
         String reset = "Reset game";
         String quit = "Quit";

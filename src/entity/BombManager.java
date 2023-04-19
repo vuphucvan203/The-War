@@ -2,7 +2,10 @@ package entity;
 
 import main.GamePanel;
 
+import java.util.Random;
+
 public class BombManager extends Entity{
+    Random random = new Random();
     private long currentTime = 0;
     private  long scaleTime = 0;
     private boolean unscale;
@@ -13,8 +16,7 @@ public class BombManager extends Entity{
     }
      public void createBomb(){
         Bomb bomb = new Bomb(gp);
-        bomb.positionX = this.positionX;
-//        bomb.speed /= scale;
+        bomb.setPositionX(this.getPositionX());
         gp.listEntity.add(bomb);
     }
     public  void setBomb()

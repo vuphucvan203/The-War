@@ -1,6 +1,10 @@
 package main;
 
 import java.awt.*;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 import java.util.Date;
 
@@ -35,13 +39,12 @@ public class Database {
             int nextNo = getMaxNo() + 1;
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, nextNo);
-            preparedStatement.setInt(2, gp.player.score);
+            preparedStatement.setInt(2, gp.player.getScore());
             preparedStatement.setDate(3,sqlDate);
             preparedStatement.execute();
         }
         finally
         {
-            //STEP 5: Close connection
             if (statement != null)
                 statement.close();
             if (connection != null)
@@ -75,5 +78,52 @@ public class Database {
 
         }
         return maxNo;
+    }
+
+    public void exportToFile() throws SQLException, ClassNotFoundException, IOException {
+        String data = null;
+        String no, score, date;
+        String path = "D:\\My Documents\\Semester 2 of the second year\\Java\\Game 2D\\War\\SaveGame\\data";
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+
+        try
+        {
+            Class.forName(DIVER_CLASS);
+            connection = DriverManager.getConnection(DB_URl, USER, PASSWORD);
+
+            statement = connection.createStatement();
+            String sql = "Select * from gameDiary";
+            ResultSet resultSet =  statement.executeQuery(sql);
+
+            while(resultSet.next())
+            {
+                no = resultSet.getString("No");
+                score = resultSet.getString("Score");
+                date = resultSet.getString("Date");
+
+                data = no + " " + score + " " + date;
+            }
+            if(resultSet != null) resultSet.close();
+        }
+        catch (Exception e)
+        {
+
+        }
+        try {
+            fileWriter = new FileWriter(path);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        finally {
+            if(bufferedWriter != null)
+                bufferedWriter.close();
+            if(fileWriter != null)
+                fileWriter.close();
+        }
+
+
     }
 }

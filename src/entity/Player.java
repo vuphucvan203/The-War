@@ -11,9 +11,95 @@ import java.io.IOException;
 public class Player extends Entity{
 
     GetKey getkey;
-    public Rectangle solidArea = new Rectangle();
-    public boolean injured = false;
+
+    Rectangle solidArea = new Rectangle();
+
     GamePanel gp;
+
+    private boolean injured = false;
+    private int blood;
+    private int score;
+    private boolean delay = false;
+    private BufferedImage imagePlayer, imageInjured;
+    private int delayCount = 0;
+    private boolean moveRight, moveLeft;
+
+    public boolean isMoveRight() {
+        return moveRight;
+    }
+
+    public void setMoveRight(boolean moveRight) {
+        this.moveRight = moveRight;
+    }
+
+    public boolean isMoveLeft() {
+        return moveLeft;
+    }
+
+    public void setMoveLeft(boolean moveLeft) {
+        this.moveLeft = moveLeft;
+    }
+
+    @Override
+    public Rectangle getSolidArea() {
+        return solidArea;
+    }
+
+    @Override
+    public void setSolidArea(Rectangle solidArea) {
+        this.solidArea = solidArea;
+    }
+
+    public boolean isDelay() {
+        return delay;
+    }
+
+    public void setDelay(boolean delay) {
+        this.delay = delay;
+    }
+    
+    public int getDelayCount() {
+        return delayCount;
+    }
+    
+    public void setDelayCount(int delayCount) {
+        this.delayCount = delayCount;
+    }
+
+    private String direction = "";
+
+    public boolean isInjured() {
+        return injured;
+    }
+
+    public void setInjured(boolean injured) {
+        this.injured = injured;
+    }
+
+    public int getBlood() {
+        return blood;
+    }
+
+    public void setBlood(int blood) {
+        this.blood = blood;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+    
 
     public Player(GamePanel gp, GetKey gk)
     {
@@ -32,15 +118,14 @@ public class Player extends Entity{
     {
         if(i != 999)
         {
-            if(gp.listEntity.get(i).name == "Bomb")
+            if(gp.listEntity.get(i).getName() == "Bomb")
             {
                 gp.listEntity.remove(i);
-                gp.playSoundEffect(2);
                 injured = true;
-                if(gp.player.delay == false)
+                if(gp.player.isDelay() == false)
                 {
                     gp.player.blood -= 1;
-                    gp.player.delay = true;
+                    delay = true;
                 }
             }
         }
@@ -51,17 +136,17 @@ public class Player extends Entity{
     }
     public void setDefaultVale()
     {
-        positionX = gp.unitSize * 9;
-        positionY = gp.unitSize * 28;
-        speed = gp.unitSize/5;
+        setPositionX(gp.unitSize * 9);
+        setPositionY(gp.unitSize * 28);
+        setSpeed(gp.unitSize/5);
     }
 
     public void setSolidArea()
     {
         solidArea.x = 12;
         solidArea.y = 3;
-        solidAreaDefaultX = solidArea.x;
-        solidAreaDefaultY = solidArea.y;
+        setSolidAreaDefaultX(solidArea.x);
+        setSolidAreaDefaultY(solidArea.y);
         solidArea.width = 26;
         solidArea.height = 47;
     }
@@ -73,7 +158,7 @@ public class Player extends Entity{
     public void getImagePlayer()
     {
         try {
-            imageEntity = ImageIO.read(getClass().getResourceAsStream("/player/human.png"));
+            imagePlayer = ImageIO.read(getClass().getResourceAsStream("/player/human.png"));
             imageInjured = ImageIO.read(getClass().getResourceAsStream("/player/humanInjured.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -82,11 +167,11 @@ public class Player extends Entity{
 
     public void update()
     {
-        collision = false;
-        if(getkey.moveLeft == true || getkey.moveRight == true)
+        setCollision(false);
+        if(moveLeft == true || moveRight == true)
         {
-            if(getkey.moveLeft == true) direction = "left";
-            else if(getkey.moveRight == true) direction = "right";
+            if(moveLeft == true) direction = "left";
+            else if(moveRight == true) direction = "right";
 
             //Check collision
             gp.checkCollision.checkLimitLeft();
@@ -95,12 +180,12 @@ public class Player extends Entity{
             boolean takeItems = gp.checkCollision.checkItems();
             contactEntity(entityIndex);
             //Player can move
-            if(collision == false)
+            if(isCollision() == false)
             {
                 switch (direction)
                 {
-                    case "left": positionX -= speed; break;
-                    case "right": positionX += speed; break;
+                    case "left": setPositionX(getPositionX() - getSpeed()); break;
+                    case "right": setPositionX(getPositionX() + getSpeed()); break;
                 }
             }
 
@@ -108,7 +193,7 @@ public class Player extends Entity{
             if(takeItems == true)
             {
                 gp.player.score += 1;
-                gp.playSoundEffect(3);
+                gp.sound.playSoundEffect(3);
                 gp.items.createItems();
                 takeItems = false;
             }
@@ -132,13 +217,14 @@ public class Player extends Entity{
         if(injured == true)
         {
             image = imageInjured;
+            gp.sound.playSoundEffect(2);
             injured = false;
         }
         else
         {
-            image = imageEntity;
+            image = imagePlayer;
         }
-        g.drawImage(image, positionX, positionY ,gp.unitSizePlayer,gp.unitSizePlayer,null);
+        g.drawImage(image, getPositionX(), getPositionY() ,gp.unitSizePlayer,gp.unitSizePlayer,null);
     }
 
 }

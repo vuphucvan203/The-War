@@ -9,30 +9,40 @@ import java.io.IOException;
 
 public class Items extends Entity{
 
+    private BufferedImage imageItems;
+    private Rectangle solidArea = new Rectangle();
 
     public Items(GamePanel gp) {
         super(gp);
         getImageItems();
-        setSolidArea();
+        setSolidAreaItem();
     }
 
-    private void setSolidArea()
+    public Rectangle getSolidArea() {
+        return solidArea;
+    }
+
+    public void setSolidArea(Rectangle solidArea) {
+        this.solidArea = solidArea;
+    }
+
+    public void setSolidAreaItem()
     {
         solidArea.x = 0;
         solidArea.y = 0;
         solidArea.width = 25;
         solidArea.height = 25;
-        positionY = gp.unitSize * 29;
+        setPositionY(gp.unitSize * 29);
     }
 
     public void createItems()
     {
-        positionX = random.nextInt(19) * gp.unitSize;
+        setPositionX(random.nextInt(19) * gp.unitSize);
     }
-    private void getImageItems()
+    public void getImageItems()
     {
         try {
-            imageEntity = ImageIO.read(getClass().getResourceAsStream("/items/items.png"));
+            imageItems = ImageIO.read(getClass().getResourceAsStream("/items/items.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -41,8 +51,8 @@ public class Items extends Entity{
     public void drawItems(Graphics g)
     {
         BufferedImage image;
-        image = imageEntity;
-        g.drawImage(image,positionX, positionY, gp.unitSize, gp.unitSize, null);
+        image = imageItems;
+        g.drawImage(image,getPositionX(), getPositionY(), gp.unitSize, gp.unitSize, null);
     }
 
 }

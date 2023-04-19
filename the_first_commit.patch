@@ -1,0 +1,1352 @@
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1679717641052)
++++ b/.idea/.gitignore	(date 1679717641052)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1679717640963)
++++ b/.idea/modules.xml	(date 1679717640963)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/War.iml" filepath="$PROJECT_DIR$/War.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+new file mode 100644
+--- /dev/null	(date 1679717640981)
++++ b/.idea/uiDesigner.xml	(date 1679717640981)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/CheckCollision.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/CheckCollision.java b/src/main/CheckCollision.java
+new file mode 100644
+--- /dev/null	(date 1680671028466)
++++ b/src/main/CheckCollision.java	(date 1680671028466)
+@@ -0,0 +1,124 @@
++package main;
++
++import entity.Bomb;
++import entity.Entity;
++
++import java.util.ArrayList;
++import java.util.LinkedList;
++
++public class CheckCollision {
++
++    GamePanel gp;
++    public CheckCollision(GamePanel gp)
++    {
++        this.gp = gp;
++    }
++
++    public void checkLimitLeft()
++    {
++        // Get player's solid area position
++        gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
++        gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
++
++        switch (gp.player.direction)
++        {
++            case "left": gp.player.solidArea.x -= gp.player.speed;
++            case "right": gp.player.solidArea.x += gp.player.speed;
++        }
++
++        if(gp.player.solidArea.intersects(gp.leftScreen.solidArea))
++        {
++                gp.player.collision = true;
++        }
++        gp.player.solidArea.x = gp.player.solidAreaDefaultX;
++        gp.player.solidArea.y = gp.player.solidAreaDefaultY;
++    }
++    public void checkLimitRight()
++    {
++        // Get player's solid area position
++        gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
++        gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
++
++        switch (gp.player.direction)
++        {
++            case "left": gp.player.solidArea.x -= gp.player.speed;break;
++            case "right": gp.player.solidArea.x += gp.player.speed;break;
++        }
++
++        if(gp.player.solidArea.intersects(gp.rightScreen.solidArea))
++        {
++                gp.player.collision = true;
++        }
++        gp.player.solidArea.x = gp.player.solidAreaDefaultX;
++        gp.player.solidArea.y = gp.player.solidAreaDefaultY;
++    }
++    public int checkEntity(ArrayList<Entity> target)
++    {
++        int index = 999;
++        for(int i = 0; i < target.size(); i++)
++        {
++            if(target.get(i) != null)
++            {
++                //Get entity's solid area position
++                gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
++                gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
++
++                //Get target's solid area position
++                target.get(i).solidArea.x = target.get(i).positionX + target.get(i).solidArea.x;
++                target.get(i).solidArea.y = target.get(i).positionY + target.get(i).solidArea.y;
++
++                switch (gp.player.direction)
++                {
++                    case "left": gp.player.solidArea.x -= gp.player.speed;
++                    case "right": gp.player.solidArea.x += gp.player.speed;
++                }
++                target.get(i).solidArea.y += target.get(i).speed;
++
++                if(gp.player.solidArea.intersects(target.get(i).solidArea))
++                {
++                    if(target.get(i) != gp.player)
++                    {
++                        gp.player.collision = true;
++                        index = i;
++                    }
++                }
++                gp.player.solidArea.x = gp.player.solidAreaDefaultX;
++                gp.player.solidArea.y = gp.player.solidAreaDefaultY;
++                target.get(i).solidArea.x = target.get(i).solidAreaDefaultX;
++                target.get(i).solidArea.y = target.get(i).solidAreaDefaultY;
++            }
++        }
++        return index;
++    }
++
++
++    public boolean checkPlayer(Entity entity)
++    {
++                boolean contact = false;
++                //Get entity's solid area position
++                gp.player.solidArea.x = gp.player.positionX + gp.player.solidArea.x;
++                gp.player.solidArea.y = gp.player.positionY + gp.player.solidArea.y;
++
++                //Get target's solid area position
++                entity.solidArea.x = entity.positionX + entity.solidArea.x;
++                entity.solidArea.y = entity.positionY + entity.solidArea.y;
++
++                switch (gp.player.direction)
++                {
++                    case "left": gp.player.solidArea.x -= gp.player.speed;break;
++                    case "right": gp.player.solidArea.x += gp.player.speed;break;
++                }
++                entity.solidArea.y += entity.speed;
++
++                if(entity.solidArea.intersects(gp.player.solidArea))
++                {
++                    entity.collision = true;
++                    contact = true;
++                }
++                entity.solidArea.x = entity.solidAreaDefaultX;
++                entity.solidArea.y = entity.solidAreaDefaultY;
++                gp.player.solidArea.x = gp.player.solidAreaDefaultX;
++                gp.player.solidArea.y = gp.player.solidAreaDefaultY;
++                return contact;
++    }
++}
+Index: .idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.name b/.idea/.name
+new file mode 100644
+--- /dev/null	(date 1680271394032)
++++ b/.idea/.name	(date 1680271394032)
+@@ -0,0 +1,1 @@
++War.iml
+\ No newline at end of file
+Index: src/entity/LimitLeftScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/LimitLeftScreen.java b/src/entity/LimitLeftScreen.java
+new file mode 100644
+--- /dev/null	(date 1680600745173)
++++ b/src/entity/LimitLeftScreen.java	(date 1680600745173)
+@@ -0,0 +1,18 @@
++package entity;
++
++import main.GamePanel;
++
++import java.awt.*;
++
++public class LimitLeftScreen extends Entity{
++
++    public Rectangle solidArea = new Rectangle();
++
++    public LimitLeftScreen(GamePanel gp) {
++        super(gp);
++        solidArea.x = 5;
++        solidArea.y = 0;
++        solidArea.width = 1;
++        solidArea.height = gp.screenHeight;
++    }
++}
+Index: src/entity/LimitRightScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/LimitRightScreen.java b/src/entity/LimitRightScreen.java
+new file mode 100644
+--- /dev/null	(date 1680600667272)
++++ b/src/entity/LimitRightScreen.java	(date 1680600667272)
+@@ -0,0 +1,18 @@
++package entity;
++
++import main.GamePanel;
++
++import java.awt.*;
++
++public class LimitRightScreen extends Entity{
++
++    public Rectangle solidArea = new Rectangle();
++
++    public LimitRightScreen(GamePanel gp) {
++        super(gp);
++        solidArea.x = 500;
++        solidArea.y = 0;
++        solidArea.width = 1;
++        solidArea.height = gp.screenHeight;
++    }
++}
+Index: src/main/UI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/UI.java b/src/main/UI.java
+new file mode 100644
+--- /dev/null	(date 1680690237764)
++++ b/src/main/UI.java	(date 1680690237764)
+@@ -0,0 +1,31 @@
++package main;
++
++import java.awt.*;
++
++public class UI {
++
++    Font arial;
++    Graphics g;
++    GamePanel gp;
++    public UI(GamePanel gp)
++    {
++        this.gp = gp;
++        arial = new Font("Arial",Font.PLAIN,30);
++    }
++
++    public void draw(Graphics g)
++    {
++        g.setFont(arial);
++        g.setColor(Color.RED);
++        g.drawString(String.valueOf(gp.player.life),9 * gp.unitSize, 2 * gp.unitSize);
++        drawGameOver(g);
++    }
++    public void drawGameOver(Graphics g)
++    {
++        if(gp.overGameStatus == true)
++        {
++            g.drawString("Game over",7 * gp.unitSize, 15 * gp.unitSize);
++        }
++    }
++
++}
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1680752140321)
++++ b/.idea/vcs.xml	(date 1680752140321)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/Play.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/Play.java b/src/main/Play.java
+new file mode 100644
+--- /dev/null	(date 1680107622816)
++++ b/src/main/Play.java	(date 1680107622816)
+@@ -0,0 +1,17 @@
++package main;
++import javax.swing.JFrame;
++
++public class Play {
++    public static void main(String[] args) {
++        JFrame frame = new JFrame();
++        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
++        frame.setResizable(false);
++        frame.setTitle("The War");
++
++        frame.add(new GamePanel());
++        frame.pack();
++        frame.setLocationRelativeTo(null);
++        frame.setVisible(true);
++
++    }
++}
+\ No newline at end of file
+Index: src/main/GamePanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/GamePanel.java b/src/main/GamePanel.java
+new file mode 100644
+--- /dev/null	(date 1680690260380)
++++ b/src/main/GamePanel.java	(date 1680690260380)
+@@ -0,0 +1,117 @@
++package main;
++import entity.*;
++
++import javax.swing.JPanel;
++import java.awt.*;
++import java.util.ArrayList;
++import java.util.LinkedList;
++
++public class GamePanel extends JPanel implements Runnable{
++
++    public final int screenWidth = 500;
++    public final int screenHeight = 750;
++    public final int unitSize = 25;
++    public final int unitSizePlayer = unitSize * 2;
++    public boolean overGameStatus = false;
++
++
++    int FPS = 60;
++    Thread gameThread;
++
++    GetKey getKey = new GetKey();
++    public CheckCollision checkCollision = new CheckCollision(this);
++    BombManager bombManager = new BombManager(this);
++    public Player player = new Player(this, getKey);
++    public LimitLeftScreen leftScreen = new LimitLeftScreen(this);
++    public LimitRightScreen rightScreen = new LimitRightScreen(this);
++    public UI ui = new UI(this);
++    public ArrayList<Entity> listEntity = new ArrayList<Entity>();
++
++    public GamePanel()
++    {
++        this.setPreferredSize(new Dimension(screenWidth,screenHeight));
++        this.setBackground(Color.BLACK);
++        this.setDoubleBuffered(true);
++        this.setDoubleBuffered(true);
++        this.addKeyListener(getKey);
++        this.setFocusable(true);
++        this.setupGame();
++        this.startGameThread();
++    }
++
++    public void setupGame()
++    {
++    }
++
++    public void startGameThread()
++    {
++        gameThread = new Thread(this);
++        gameThread.start();
++    }
++
++
++    public void run()
++    {
++        double drawInterval = 1000000000/FPS;
++        double delta = 0;
++        long lastTime = System.nanoTime();
++        long currentTime;
++        int timer = 0;
++        int drawCount = 0;
++
++        while (gameThread != null)
++        {
++            if(overGameStatus == false)
++            {
++                currentTime = System.nanoTime();
++
++                delta += (currentTime - lastTime) / drawInterval;
++                timer += (currentTime - lastTime);
++                lastTime = currentTime;
++
++                if(delta >=1)
++                {
++                    update();
++                    repaint();
++                    delta--;
++                    drawCount++;
++                }
++                if(timer >= 1000000000)
++                {
++                    System.out.println("FPS: "+drawCount);
++                    drawCount = 0;
++                    timer = 0;
++                }
++            }
++        }
++    }
++    public void update()
++    {
++        player.update();
++        bombManager.update();
++        for(int i = 0; i < listEntity.size(); i++)
++        {
++            if(listEntity.get(i) != null) listEntity.get(i).update();
++        }
++    }
++    public void paintComponent(Graphics g)
++    {
++        super.paintComponent(g);
++//        draw(g);
++        ui.draw(g);
++        player.draw(g);
++
++        for(int i = 0; i < listEntity.size(); i++)
++        {
++            if(listEntity.get(i) != null) listEntity.get(i).draw(g);
++        }
++    }
++    public void draw(Graphics g)
++    {
++        for(int i = 0; i < screenHeight; i++)
++        {
++            g.drawLine(i*unitSize, 0, i*unitSize, screenHeight);
++            g.drawLine(0, i*unitSize, screenWidth, i*unitSize);
++        }
++    }
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1679717640972)
++++ b/.idea/misc.xml	(date 1679717640972)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: War.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/War.iml b/War.iml
+new file mode 100644
+--- /dev/null	(date 1680019687822)
++++ b/War.iml	(date 1680019687822)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/res" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/entity/Bomb.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/Bomb.java b/src/entity/Bomb.java
+new file mode 100644
+--- /dev/null	(date 1680690126809)
++++ b/src/entity/Bomb.java	(date 1680690126809)
+@@ -0,0 +1,66 @@
++package entity;
++
++import main.GamePanel;
++
++import javax.imageio.ImageIO;
++import java.awt.*;
++import java.awt.image.BufferedImage;
++import java.io.IOException;
++import java.util.Random;
++
++public class Bomb extends Entity{
++
++    GamePanel gp;
++
++
++    public Bomb(GamePanel gp)
++    {
++        super(gp);
++        name = "Bomb";
++        this.gp = gp;
++        getImageBomb();
++        speed = gp.unitSize/10;
++
++        solidArea = new Rectangle();
++        solidArea.x = 2;
++        solidArea.y = 0;
++        solidAreaDefaultX = solidArea.x;
++        solidAreaDefaultY = solidArea.y;
++        solidArea.width = 21;
++        solidArea.height = 25;
++        positionY = -25;
++    }
++
++    public void getImageBomb()
++    {
++        try {
++            imageEntity = ImageIO.read(getClass().getResourceAsStream("/bomb/bomb.png"));
++        } catch (IOException e) {
++            throw new RuntimeException(e);
++        }
++    }
++    public void update() {
++       collision = false;
++//       gp.player.delay = false;
++       boolean contactPlayer = gp.checkCollision.checkPlayer(this);
++        if(collision == false)
++        {
++            positionY += speed;
++        }
++        if(contactPlayer == true)
++        {
++            if(gp.player.delay == false)
++            {
++                gp.player.life -= 1;
++                gp.player.delay = true;
++            }
++        }
++
++    }
++    public void draw(Graphics g)
++    {
++        BufferedImage image;
++        image = imageEntity;
++        g.drawImage(image, positionX, positionY ,gp.unitSize,gp.unitSize,null);
++    }
++}
+Index: src/entity/Player.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/Player.java b/src/entity/Player.java
+new file mode 100644
+--- /dev/null	(date 1680680596438)
++++ b/src/entity/Player.java	(date 1680680596438)
+@@ -0,0 +1,101 @@
++package entity;
++import main.GamePanel;
++import main.GetKey;
++
++
++import javax.imageio.ImageIO;
++import java.awt.*;
++import java.awt.image.BufferedImage;
++import java.io.IOException;
++
++public class Player extends Entity{
++
++    GetKey getkey;
++    public Rectangle solidArea = new Rectangle();
++    GamePanel gp;
++
++    public Player(GamePanel gp, GetKey gk)
++    {
++        super(gp);
++        this.gp = gp;
++        this.getkey = gk;
++        solidArea.x = 12;
++        solidArea.y = 3;
++        solidAreaDefaultX = solidArea.x;
++        solidAreaDefaultY = solidArea.y;
++        solidArea.width = 26;
++        solidArea.height = 47;
++        life = 10;
++        getImagePlayer();
++        setDefaultVale();
++
++        direction = "left";
++    }
++    public void update()
++    {
++        collision = false;
++        if(getkey.moveLeft == true || getkey.moveRight == true)
++        {
++            if(getkey.moveLeft == true) direction = "left";
++            else if(getkey.moveRight == true) direction = "right";
++
++            //Check collision
++            gp.checkCollision.checkLimitLeft();
++            gp.checkCollision.checkLimitRight();
++            int entityIndex = gp.checkCollision.checkEntity(gp.listEntity);
++            contactEntity(entityIndex);
++            //Player can move
++            if(collision == false)
++            {
++                switch (direction)
++                {
++                    case "left": positionX -= speed; break;
++                    case "right": positionX += speed; break;
++                }
++            }
++        }
++        //Delay
++        if(delay == true)
++        {
++            delayCount++;
++            if(delayCount > 60)
++            {
++                delay = false;
++                delayCount = 0;
++            }
++        }
++    }
++
++    public void contactEntity(int i)
++    {
++        if(i != 999)
++        {
++            if(gp.listEntity.get(i).name == "Bomb")
++            {
++                 gp.listEntity.remove(i);
++            }
++        }
++    }
++
++    public void setDefaultVale()
++    {
++        positionX = gp.unitSize * 9;
++        positionY = gp.unitSize * 28;
++        speed = gp.unitSize/5;
++    }
++    public void getImagePlayer()
++    {
++        try {
++            imageEntity = ImageIO.read(getClass().getResourceAsStream("/player/human.png"));
++        } catch (IOException e) {
++            throw new RuntimeException(e);
++        }
++    }
++    public void draw(Graphics g)
++    {
++        BufferedImage image;
++        image = imageEntity;
++        g.drawImage(image, positionX, positionY ,gp.unitSizePlayer,gp.unitSizePlayer,null);
++    }
++
++}
+Index: src/main/GetKey.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/GetKey.java b/src/main/GetKey.java
+new file mode 100644
+--- /dev/null	(date 1680021358847)
++++ b/src/main/GetKey.java	(date 1680021358847)
+@@ -0,0 +1,29 @@
++package main;
++
++import java.awt.event.KeyEvent;
++import java.awt.event.KeyListener;
++
++public class GetKey implements KeyListener {
++
++    public boolean moveLeft, moveRight;
++    @Override
++    public void keyTyped(KeyEvent e) {
++
++    }
++
++    @Override
++    public void keyPressed(KeyEvent e) {
++        int code = e.getKeyCode();
++
++        if(code == KeyEvent.VK_A || code == KeyEvent.VK_LEFT) moveLeft = true;
++        if(code == KeyEvent.VK_D || code == KeyEvent.VK_RIGHT) moveRight = true;
++    }
++
++    @Override
++    public void keyReleased(KeyEvent e) {
++        int code = e.getKeyCode();
++
++        if(code == KeyEvent.VK_A || code == KeyEvent.VK_LEFT) moveLeft = false;
++        if(code == KeyEvent.VK_D || code == KeyEvent.VK_RIGHT) moveRight = false;
++    }
++}
+Index: src/entity/BombManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/BombManager.java b/src/entity/BombManager.java
+new file mode 100644
+--- /dev/null	(date 1680689461245)
++++ b/src/entity/BombManager.java	(date 1680689461245)
+@@ -0,0 +1,37 @@
++package entity;
++
++import main.GamePanel;
++
++public class BombManager extends Entity{
++    private long currentTime = 0;
++    private  long scaleTime = 0;
++    private boolean unscale;
++    private double scale = 1;
++    public BombManager(GamePanel gp) {
++        super(gp);
++        scaleTime = System.currentTimeMillis();
++    }
++     public void createBomb(){
++        Bomb bomb = new Bomb(gp);
++        bomb.positionX = this.positionX;
++        bomb.speed /= scale;
++        gp.listEntity.add(bomb);
++    }
++    public void update()
++    {
++        super.update();
++        if(System.currentTimeMillis() - currentTime > 1000 * scale){
++            int i = random.nextInt(20);
++            setPositionX(gp.unitSize*i);
++            createBomb();
++            currentTime = System.currentTimeMillis();
++        }
++        if(!unscale){
++            if(System.currentTimeMillis() - scaleTime > 10000){
++                scale -= 0.1;
++                scaleTime = System.currentTimeMillis();
++                if(scale <= 0.3) unscale = true;
++            }
++        }
++    }
++}
+Index: src/entity/Entity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/entity/Entity.java b/src/entity/Entity.java
+new file mode 100644
+--- /dev/null	(date 1680690126803)
++++ b/src/entity/Entity.java	(date 1680690126803)
+@@ -0,0 +1,59 @@
++package entity;
++
++import main.GamePanel;
++
++import java.awt.*;
++import java.awt.image.BufferedImage;
++import java.util.Random;
++
++public class Entity {
++    GamePanel gp;
++
++    Random random = new Random();
++    public Rectangle solidArea = new Rectangle();
++    public String name;
++    public int solidAreaDefaultX, solidAreaDefaultY;
++    public int positionX, positionY;
++    public int speed;
++    public int life;
++    public boolean delay = false;
++    public int delayCount = 0;
++    public boolean collision = false;
++    public String direction = " ";
++    public BufferedImage imageEntity;
++    public Bomb bomb;
++    public void setPositionX(int positionX) {
++        this.positionX = positionX;
++    }
++
++    public void setPositionY(int positionY) {
++        this.positionY = positionY;
++    }
++
++
++    public int getPositionX() {
++        return positionX;
++    }
++
++    public int getPositionY() {
++        return positionY;
++    }
++
++    public int getSpeed() {
++        return speed;
++    }
++
++    public Entity(GamePanel gp)
++    {
++        this.gp = gp;
++    }
++
++    public void update()
++    {
++        if(gp.player.life == 0) gp.overGameStatus = true;
++    }
++    public void draw(Graphics g)
++    {
++        bomb.draw(g);
++    }
++}
+diff --git a/res/player/human.png b/res/player/human.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..2a46aa10e96ba10b8de5214f802a7f0ddb4f5611
+GIT binary patch
+literal 790
+zc$@(i1L^#UP)<h;3K|Lk000e1NJLTq003kF003kN1^@s6aN?Cz00001b5ch_0Itp)
+z=>Px%&`Cr=RCr$Poxx4RKoCWp0#F*@LIa2bsEC57hyoA|aG`;S0zf!dkEM_Pw`b$W
+zdGlGnx3lA{qvSO4*NVWY)ohr|gpg*703k;a^6>io)9hL;)A@Y4i!S0=I70sCA0Z+)
+zDnta99*&SSVKE;eBCz!En-lW>c%Now$$$FzTFgO+1+N~05S>}{6$pvq)x!~@GmF0B
+z@Iubdmqoyrx3dMjnvW2K%nNVxqm$~kS6#ts*{Jzc2o*ww{1K>n)Zr^6y#=ZH2oZ^?
+zJwc405F!#ohzP8DV(2<tL<mA=0-W}W3&Ay<9^xWt%0Y+;q$>s?E|R7kgqT3OVh%5)
+zx{Y-Ku5vg!DL&+Ykn56ZfBa5`m<Xuv)Tt0EWF|llp@*#QL2Y`7X{WTs9R9Y~M$#07
+z5EDpO3_@HaO*w}VV&b)1%*{Oy*^Q*>A0xyB(iMXc7fDkNLQEiCF$i&yH02<~1kx2V
+ztPmG~DyKS4P6JC{SL`e+J#mDj35)p%5rL(LBP2~&%twd_EIk|{X~JSYLPTKc;Rs0+
+z7V{Az0!t4^NSbhw@A~e>QQpC~f2WR+ohm^+vr?x?g{Z{XvStEoS*C^Kib05rq$#J3
+z5cM`TJ>JAujzLKHyWCYH2tmm5nn`a#YQDO%UE`?`DufDItESB>#I<#F%Ncgd>ITv^
+zAA}S?sidA+A*2~dgdk*fcZ)T3^*P2~TTObNYH!(GhzeePPBKb<bzKM%pToF>BShRg
+z_G<R+D@5JnEAHybMu=(aaDjB?h=n=sBiw4m?*&o?zj+UFO;81_j(5$|l@seBt_iAu
+z)$y)*x^fWWB5BHLBP6}D)A=SJeVTe2SUMjeA_0Un1BMWUhy<>~Y3h9HWO?DFx0H1L
+zzsh0ZMN|kCLWQhV6BR;*P$5*vG)**h@wOukES)c2ZaJJDLJy&b4ADbeB|m!3FM`kQ
+UgE}p#)c^nh07*qoM6N<$f?7XYVE_OC
+
+diff --git a/out/production/War/entity/BombManager.class b/out/production/War/entity/BombManager.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..21667c358c8cc7eeb1f6473d172d12aaa4b6d396
+GIT binary patch
+literal 1470
+zc${riYjYD-7=BKhX328erXdu2L4jgPHcBd0tJB(+OTm=1l(q!ucwv(q!$PtfHyfqD
+zz!^X27iUyv<UcUev<Nf)0KfVV{2`9d*(M|k`{CT)+w(l{Is4~7&;J0hfQpGe^c#ps
+z3?M2nsNBE_cC#ztBoJM2Tqjr*IF`!SY{$)BvukR@c2#vgU5McbVg^i!qmTlLcI+ju
+zR$Q}PyP|x7qot<r)3EK-lz>>(F+&o=Iw004*;S=2`gBAhfnx##;VFHum^hA611BWj
+zz?eY%f&Go0t=euSyS3X0R83%{C;OUHtvU^X{#1I^zywS8;L!z6O1z1;1o|p<Ci_1f
+z6XWRDZf7K>aF*!mUc(6-&%Hw|xfso7^l(lhrOgA4x>DsBEMyG4Bk?ZI3k>}?senmH
+zK}XEv`H(>~aH`phzHjg5X=LFUyl3Eo#4O&Y(68|!DZ5-|f>ge%!HwbrRSM?QJGzA*
+zO3dLS_N!Sh+kpyIC`6ZkT!#KMtp$lsz(z)W+bw(4F42Q#Gdv@dWn46HN#ZiDbOi5l
+z5HMWzD9E`)6iMaMITKfL&A_J;IjpiB-GD=MY{!tVzHU0cTKC-bW|fjmzmCMKM<y}n
+zCDyPmAR8*!=ypSwE@=CP#7)iGEcuG8JB{9w*v2h_ZMvPiv@;M2fphWb((k|O?{ReL
+zui5Zp!pmNnUc-6ERqM@KQTf|;QO70n9upL7-_iT_VI;V(?^!bc>V2Q5wa6_WQm>WA
+z!r|FgV3!`Q+4XiJbIWV`C3V%&n|M!}^I8p@CY3&7j&S4y<El@;n{Xz-aOR8Q+z+9j
+zFUQZgD|4^oCauf?gcWPS(8HiL+(O)Xh9uWd!|2aBjx!F-uj5S^tPn$zRVFZqFK8J(
+z%!My;FH~?+KO$BVTKaayfYI7(<^{&@T6>s0z^QzOi_<N<ow>V*>F>CSdq1==t<8H#
+zXZDf3-9<49-5|{_&gvt4feB>Et&3o$jX>foY!pKTb1xD6P4wF9k#&F%NRd?x^?ec_
+z>$(qreu5Mi^YP?9mKH1x;TcwL$Hyk_@8i0)j~j=w7_@9Y?j#sgNfds1LdawgPvTCc
+ztDhB~?ELZ@j#!ZvHlK!F&`d6b9U5iVPGF2bt|^YQRC$hyF5)CssNXgfyoXb$u*ct$
+aPlx3ceM;O5&7{q@e0T#EHB%Mp_0_-kXD%QB
+
+diff --git a/out/production/War/main/GamePanel.class b/out/production/War/main/GamePanel.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..05b811ac11940913d0cbf92ad96036a1f62ebc64
+GIT binary patch
+literal 4105
+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
+
+diff --git a/out/production/War/entity/Player.class b/out/production/War/entity/Player.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..869807ad28481c8e71bcefb2976746f12fc047b0
+GIT binary patch
+literal 3304
+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
+D>Hi83
+
+diff --git a/out/production/War/entity/Entity.class b/out/production/War/entity/Entity.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..881c6359a7dd0a1e959f7853e6143d0deee400c4
+GIT binary patch
+literal 1801
+zc${@q|595;6#kZkToRVw5EYcRww7?w-l9#l4N`%&m>SwhDneU-Y;u?M)|-1XH#hD0
+z2)=^P;6Kg~J5y(T03XWn>}CleMrPP^&)IXn^X+$b^Y=e*{sOQ8nZ^hb7LpvJNHI*v
+zAok*)oqO6aq?=*Oi@h*7WMD;=JjRh$nZ2DO6&>f`DmvO~O6g`Wi75-y95a|@n0_H%
+z3da{g-FZ}fA!{*1YQqb>c#|QKTRpHaf11>eJ>S_Efg3h5n8TF9ev9L6yhAmSjx)@b
+z26GD*mME^n;#KVIQxj_E%M2E~Aj=#VaFJ-YLf><@A}JW=OaCn>sO0xKF5?QF#+AMx
+z71$FMy~?qo&Y02Bov<CmD!j^JtK@Vo^nI^Iij3hys=25(uW>lIPMfY5Q48Aa(bsxZ
+z;>Zi?y6MLppWp_=NWDpFlp4YdoL$k7Wf4f9GH&8i3!ib^!fl4h^V=j&lQ_wUVX9<C
+zSk?h5+`#7+HaYI}54dd7lfHK>75Em%wmQaS_)<m+xDt!F-BQf%a@@mx%B_ZtDnXof
+z*e17-!Ivmnc);-$N(|$DdsN{@;uS+Scc%1iB%05?TC1>nK>GnTVwmX-<*qyyZ9hI7
+z5<4PruOaI4^lmPnf$F%k-9A2+k#vj7D=_eujLT>DH<>Hyo;#r{l}=tDAGRA+89f$N
+zU#hu;HQ^tK$Wy)vCgbN`t54N#^8s+8#_Q*L(X}p~4^qw;xfS(380K<=16I^h?WQYY
+z>N-K<*M8a)O~ZoKsbq+TbQvpQJF3b1o=O|<vb&}dafv23NsoM*{^?>t{n0z3m8qwo
+z?H;ac`w%H@9~nDpY}#0E>>Xq2b!fX{eB1br!7JlyZRy&O9iy*(RA_xn-X`%HA)B(7
+zI$*!k*9g9$HKU`8)O!gB^p)*q;aePP?kUZRw7}7DENc*JnJO;)4_4Y>J;76h<!B!m
+zwNJo)>p`V-@Un*C-2?-}@N8(YHCVhdwD`NB#hJn4wV}l`_}&!%f`mR?-hPb<`%lar
+zy~aWZS^8Y0&v!d`&rWo3Ni83!C1=mBb?}i*%lesOS4k1YBuTBNFhO&eBkksCt_xTt
+z{nTV{V7*Vxd{521zF+DLKVa6-+M^srIZJ0+KSBNkg<mnQoMZ=IsJ@B5N#&`_&Ax+X
+u4fc;Zk1bG;eq9XomKl1Q(011T!0zDOZ_$mr-N!WDW15CQRWq&W8uwp2#y`~n
+
+diff --git a/out/production/War/entity/LimitRightScreen.class b/out/production/War/entity/LimitRightScreen.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..33e54d44b0c726f54e7ab97a262f5aff1a33b6cb
+GIT binary patch
+literal 664
+zc${@nO>fgc5PjpMF*Z)pq+hf^OAD05DfJmrAt3|^$qJ}NK^!;9D%r}h!Clk#5Ac7G
+zu!=z92lU7E#2GQ`=G2PA?##U1eQ);7`QM+v0qkMdg@uxhvWGcT2vr$trB8#GMIco6
+zRIKzf!a^&Y3Ka*h#Z<l%v5dOyzKt7%=Arl^0&%Q^eL2)39!JuJ4c8FfB$Qh1zJn@i
+zHtHVc(IBkMG(t61dS8tv`e2w!855kNBvPa2sT738@H%nVVde!7i&!Gi39mN>S@CeI
+zKu%4y=Ha%f=8n}!Ph8x^x{VDF_pnK56r`C}QSf$f$h=2{S}H$hDwVw??qyL#*lt~F
+zM=UzK)@@&hjM#k-4~$r4BF#q#<rm3F66&FfWiOi!WcpqVB1W2FG89o?q{`GYu&gJF
+zJ6H|>V@a1_jXx3QubNMA50We$%2&$pEM0xLYr4fI8*lNP*&1X0EaO4*{*bG$C>7^V
+z{mvQ4{{{Qw8JrxR{~ca~{^V$ytdwKf#Bz>R6FWa}=R?D~$g%Z}Ut8GbeVyF^%+wv$
+is$vZ_Y@rUHt0%1eh)<U<)zCs4C^8?NqNkmL=kY(j+mO5f
+
+diff --git a/out/production/War/entity/LimitLeftScreen.class b/out/production/War/entity/LimitLeftScreen.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..3f86a4d625e58300a8bc00fb8abd95802d4bd7fe
+GIT binary patch
+literal 659
+zc${rf+iuf96rAIvac!KWNkb^NLb;S&pne1?6%s;#kgR}O6vX2uS(2?bHn?j_-}xaV
+ztRj&306vCKK%8~+)bg-<c4l{Hj^_OS`{NgYUF`U9P;yZYu!0JqDr2L}armq#gvzdp
+zm3d59??els;_!u7$k!s4de9xYSS2(M#3vDoBNOh)i4pNkOCK(LD|mrW>U2jQs;IfB
+z2UtUc&|Z2(YN1Rd-<$nODrHRY4il}WPf{ret?0b&z+>U{04-c3&}UvREpsWrM!_6g
+zbS1!5i&l=*)XaTc$EJ%L0d8W8&?rPRqjdOce89Sggjy;;W-67#Bpzm36Sh02-kMF9
+z&j#J|lr_5@;Epw`%%z&m4WaxrnMy)EQn4Ini?K}Kh_Pm-86^{;M<P`gFUhi*EAC(;
+z`hOw=f;0O-SUVd%!QW4^bRwTCE7LmjZ^!nEEl%CxA#*S`_vMMF%==wNUr;LUANBet
+zpx#fo?@r+52zuWTtmbIiTFTM3wVdO!t^Mz~_O{{t$#Lr||8=m<`z9v=*nxZOROM;Z
+eIPN++j2^P{J-%(9dNJ1pic=5$qNDqT&VzrF7LHN?
+
+diff --git a/out/production/War/main/CheckCollision.class b/out/production/War/main/CheckCollision.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..5b4445011e8a1bf2b207575b1598be3fddc06ac1
+GIT binary patch
+literal 3684
+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
+
+diff --git a/out/production/War/main/Play.class b/out/production/War/main/Play.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..c105d6d443e7ef765d4622cd9fdc65537b3c351d
+GIT binary patch
+literal 837
+zc${rg+iuf95Ix&CapG*!lD28Mms?3<sDW~mQt=X01hQz=MyY_OO|osbICf+^E${<;
+z4==7nB|d<ULd-f5eIWZVqnSA~b7p3L|M~d~z$RW=m_x>d!I4FdVc}Su2*(rtp|jmP
+zmi?F^x2b#;zhcPL8(kB5hKdG#aiUX2uy<Rb7)lE!GFlWlI7$q)NXD<_ff##n+Y2JO
+zJ(8h_Rp2ui^|y_##?Esr;1UBT?5>Q|H_`K?j(==)^H^jsJ4bSLUxXUG%u&S(L!Q7L
+z6>H#f-Myf@7l%Zrr72!!C=Z45oj1g6NBGjSP@B-Z#&I1tXcjRTFf^wH#A)obgW)Lf
+zr60E%vz$74mE)FPk}(qf&)RW^<1X$I5#r<q{dB%v>5)E>oq%CwcKvkt`y6#WyhXWP
+z6)76sM3bSAGT-sUS8CJ_1~liqt9<!>JnYG^Gg(nZck{X;RN9_8jrd4K3`O@}g%&xr
+z!BDM#nzbv6i|~+=7H5PRvIqLM3`_3+7pJhb7mUNc+)}!GK{s62I9gJJewBW6VESK?
+zw8?TvGt$}S8Q70B{D5RGbsBg`l1~6wCooXJBRrlae@7-Qx^WKk!x;*$ol9WZnFM9K
+zQc196pQA>BD+#Xd+X-&kEWvHtNU(O%YK=<jhIu+biDZTB8j5s9eT@=PDB}rzN=>CY
+VX-D=3={%8mif8Er&(nG@{sN7ju)qKS
+
+diff --git a/out/production/War/bomb/Bomb.png b/out/production/War/bomb/Bomb.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..35efedccaa8535108cffc9c59b165ff73401504b
+GIT binary patch
+literal 924
+zc$@*817rM&P)<h;3K|Lk000e1NJLTq003kF003kN1^@s6aN?Cz00001b5ch_0Itp)
+z=>Px&R!KxbRCr$P-Jz1zKoAAcUC&QoDKr9uK%x+MJ^+hEA^8dZ0EI+g(G-@Sz(a+4
+zsSVjjre~)6_MORHJ;@~ZO!p+O_U+!@=!YtSTdJ$k#oSPWyngrLcZAKy_irihcYCkU
+z3yccd3y%RzARA4Acr9(G^9aN#NYB$`qo`%=G^Yk(-^8y~mKCJ;-u^dFu|j$$_G~9v
+z=UT$^%;5;V2(pIYc|lphGR#}5Kr_g4GeYSjEnzHYuL2QD8;AvBJ##gPQ0h=>Fq$ev
+zdx{;T7NZM9Fvl=07%m`cVfSHLG2B2@Eq5qA815ivhv~%-h<$%9j`Y9?13A;a;sw$5
+z9#UK`n*lSw-Fst%R>&4@MwAE)fz*`xWo#4#tYyve<P{A82U#b4_VRPculO`9_P>Wb
+zeEg$$C<+7CvaanXKfgaJ2GKiU4ZCHo<ya&{T7_61iCY5f#oHeL_0x-{Pr*H|A!TBQ
+zr>;HvT1^>Mv4uP>$hFm+jghj4SX!1x>9?FiAT6l{9wU&za9d721qj0i-4gz^d&o>6
+zHLy|D<noktMigog<|n6`RbMlf9%Pme5iKZD7-8=rGq<ovj4+T{TUazkD9B7G2nfih
+zy|c8gX+UPE5+p`=%NiX7jR64}6(s`$1~M8-76ue#Bou*IUXMXzGBH#kJLGH(I0$>&
+z5(uabS*H<*H7U?Ifq;UxP9qR&QlN1H0R?THMj+OtK;r}g3fel2K&(lD#t8%zv~?PR
+zSd#*cJ0%G7$0q^-t$gb=0<k6q8Yd7?(AH@LVoeG(P9UJ5t<wm^niOc9KtMrTr#USM
+z>$`|RtV<U(P9UJ5t<wm^niOc<sX-X`5rG8#d%V_y5{N+VtsR%|skf|1wr^K4RL7EI
+z8VK7SA`r6w*dq`k5Ecxztjp#nkV_CO8@oU*AithJIs6;GZ=Swtd4Q`vMj)HWN+{Lo
+zRvz%+%eT}g&Hd%3UQ9N|5{5u_OClRZAObmTs;Mn&xiVGAzdq?8*(hpRR|+<(O4u;c
+z-_%!|3=l>PfmFV;AcmiI4^f32EHAaJyKpEf1pTDNS{*cd2y%00#-Ia<t`v3*N{}d&
+y5in>$yj$2P81x_>)iM&s5FkC(G8)EmuYUla$DMQ*&#IIF0000<MNUMnLSTYMyMbW<
+
+diff --git a/out/production/War/main/GetKey.class b/out/production/War/main/GetKey.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f06d380ddeea5929c50c403a10e672cb8f758f6d
+GIT binary patch
+literal 889
+zc$}S5%Wl&^6g?9=aqPI%O-moCffguni-cFKT96PgRhWm`DhqZKcSxsAoXVL7WyzPo
+zFR%clF8Tp{6GGe>TNR>ILM(h=bM8H7?)dx9(=z~Dh&)taIk0_HQDX=W`IyIjp7r9_
+z-9wQohT4|Qq<Y9;Me7|8b+`^Z9}V~n3kJ^Lt5}Rhrs5Z3@>B;5UQZ~>9uN10>D+d4
+z1=9`!A2Vn&GzMH|@pA)Ws1Jr?k%)KH$lhw?oR6y-=IVnT**j1U78qI=`4Tx&A`>}-
+zU64&DG83;(23?Ww@ot|g&19JJeuw8$=Vj4W2Xe$PmHZ}Tlaw5Z$=>8x>@$Q>a>?~J
+z*E=MXhAdr*pbgNZH@O&%^ej6y+SoQR?kb)hz2wKGkOtv)L|<?N^md0Qc`BYsb5zK>
+zr%A9%YpH-?-dI{9Js{ItB5zYf??-l#vY0$0U)}fy_L+hTmdMsjv4$2|zW`tvp&4@x
+z*URSn29Jx4zG<8<4$DRz-N1_BTRk7~LH|?aqq|?>JP3nFAK`|<+9%XE>@S!KgD0lY
+zE(^1o$udk$x(N`FuqH9hqK!Gjx>C$LXN^kMDsJH>eHGlMstfxEW|-a3>sb32Io6+Y
+XtiQ-vB$^h<StdE*|H`>zw%Ps#nLd+S
+
+diff --git a/out/production/War/entity/Bomb.class b/out/production/War/entity/Bomb.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..791cf155716f9c9be943c2b9cb4355ec612189ac
+GIT binary patch
+literal 2290
+zc$|GzNpllN6#m+lJ(g(O@)~Tw7=n#7Hi(cI6665JY)*_#EHJhM2_va34UA^QXyhdu
+zNyxr0H%__bOqB<yP?g+s&VR_CNTu?+XS}<jD)qeXe#`g1_qzMfe}DTOz%YJ}p$4@Y
+zA{=$7XJ{0*XL`%23+lsAKWy5jcbcIsF<vrEJ9Wt@iK~V!taNg^0Sye1b51E6MGU(%
+zaE?YaG3*Mx$Su;a$%dhI{Eo3;q%6ZOq%xjs+J&?<i*vM~m7%6kW{7VM5+jXvjt+D(
+z@PhEhN=88hZfg_C=@@pSOG7uu9_(dkQ4y-1X{9E!cSO#sFf_U1Ue$EPgkw)sEsLQ)
+zu>nY+mQHS8lGu7U_M?}fu2L2v&%nks9HdN?va#r;rbv@)ED^&29FiP%O1plJ!$>eh
+zD~@I6M_gerw2yDMq96yLa}3BJY)Q_Ja2!>$W$EY`#|v`SvgYW#m^Z4HHzRjn<alYv
+z-C61B1jk7Qe$mW(MY-|{$0@l|UleAc=t&pD9IwiyXxXWlp6S@LF`U6!4I>=qFiI8K
+zN(@5-)nU{!Dizrk8<|s!=>}XN)>Bz3k{XVd?LrKfa9P6`$7^_<p?Ql9IU=7^qT*ED
+zoEWK4dkCY%kW6gvnJ}Q~q{i%W)eBUqPp)7>!z9O5yur{Rb(T`5>=vmhzhjfsilj_+
+z97^oyB)MK9Wtloxou3!3$SZr*5gCqaxK16e6jo13&;J{0xIr1NMV!2_loMr1wuV`T
+z?)4O>s^qXF*7jqV!JD$HZZhoN$i=my>ns{s>Y(Jbg!LB3+qg|-%sG~2R>+h(XfBE@
+zavJg+0`pXp&1Z`iaz&B5JGySt5gfnKP0Pe>5vGPa9CtxhZ9C`?A<EZP%UBjJosh)%
+zri&z<RA6il2XxHq%b{NLs#;)36uYQs@Hnb6oyJYO)XI55l2lscSdx7kvCMfP8F+`|
+z-A#==6T|!XK*N2G5Ao6J-5^VJ$u-JFGe=z)&AY~;s?mB+NR6OuWAxivShX{mtq6C4
+z;3nq?!KjlLG85Al6V*~yxYuN1<bCJl3~SnOO*s!2BVN&@z>VV@Zpbv%N=Wi|=n&d#
+z%y>rb?iHgPx~Q*~^M*%4W6rT@%Ufk9BC}!W+>pp>s?;VFq(H^nVUKt<0}f&tbpS7#
+zGEP)tJ1W)b>X6R_!01nxHH{IH>A|4!W19ViTD5QK15d#8R?SCLAMnwvKSrBA@D$J8
+zh<C+fmXCe<GaQ(Gg6Dno=_}}~^O2O_S|5YD6jqS*kqX5@AIGH>@9;6Cgf1U1>+!#R
+zq#sed8a$x!6q;ykB|L4|g?7a0xoAfx4$|Xr1YH<HH(hdja2b1%!9LtX4;_g8)Xly4
+zge*G)?D!O)0ZNiN5?}J!2{T*_GwjhRrPHnFALHUvjQg1Sm1_A6GqaTV+#in=Lvg|}
+zP5KX%?>ZX$Xe~jj{e<f<AxN&pZATQJ;|pci6C(JM{u*jB8t7~@e6<E*B?OVtiLP73
+zNAn5{!c!O~`PM_k_1P7qN#1vx2-*|*1p|RnX$AKl682z1N(+&^kA-j^@o`VG86fT_
+zM4%U`j<{=~w`ezx5&q-Q>8&}56LgWE#1zsSn9GE?Tj<638n+2-n882jV}msP2H%Dm
+zIJ8_#Us?01D+7b{S=Iy0%|Vx}OYAY;yRly7CS`braGfPCM^yaYz}Z^mlK2katIj-x
+OA8?&48GckAe)<oN<reY)
+
+diff --git a/out/production/War/player/human.png b/out/production/War/player/human.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..2a46aa10e96ba10b8de5214f802a7f0ddb4f5611
+GIT binary patch
+literal 790
+zc$@(i1L^#UP)<h;3K|Lk000e1NJLTq003kF003kN1^@s6aN?Cz00001b5ch_0Itp)
+z=>Px%&`Cr=RCr$Poxx4RKoCWp0#F*@LIa2bsEC57hyoA|aG`;S0zf!dkEM_Pw`b$W
+zdGlGnx3lA{qvSO4*NVWY)ohr|gpg*703k;a^6>io)9hL;)A@Y4i!S0=I70sCA0Z+)
+zDnta99*&SSVKE;eBCz!En-lW>c%Now$$$FzTFgO+1+N~05S>}{6$pvq)x!~@GmF0B
+z@Iubdmqoyrx3dMjnvW2K%nNVxqm$~kS6#ts*{Jzc2o*ww{1K>n)Zr^6y#=ZH2oZ^?
+zJwc405F!#ohzP8DV(2<tL<mA=0-W}W3&Ay<9^xWt%0Y+;q$>s?E|R7kgqT3OVh%5)
+zx{Y-Ku5vg!DL&+Ykn56ZfBa5`m<Xuv)Tt0EWF|llp@*#QL2Y`7X{WTs9R9Y~M$#07
+z5EDpO3_@HaO*w}VV&b)1%*{Oy*^Q*>A0xyB(iMXc7fDkNLQEiCF$i&yH02<~1kx2V
+ztPmG~DyKS4P6JC{SL`e+J#mDj35)p%5rL(LBP2~&%twd_EIk|{X~JSYLPTKc;Rs0+
+z7V{Az0!t4^NSbhw@A~e>QQpC~f2WR+ohm^+vr?x?g{Z{XvStEoS*C^Kib05rq$#J3
+z5cM`TJ>JAujzLKHyWCYH2tmm5nn`a#YQDO%UE`?`DufDItESB>#I<#F%Ncgd>ITv^
+zAA}S?sidA+A*2~dgdk*fcZ)T3^*P2~TTObNYH!(GhzeePPBKb<bzKM%pToF>BShRg
+z_G<R+D@5JnEAHybMu=(aaDjB?h=n=sBiw4m?*&o?zj+UFO;81_j(5$|l@seBt_iAu
+z)$y)*x^fWWB5BHLBP6}D)A=SJeVTe2SUMjeA_0Un1BMWUhy<>~Y3h9HWO?DFx0H1L
+zzsh0ZMN|kCLWQhV6BR;*P$5*vG)**h@wOukES)c2ZaJJDLJy&b4ADbeB|m!3FM`kQ
+UgE}p#)c^nh07*qoM6N<$f?7XYVE_OC
+
+diff --git a/out/production/War/main/UI.class b/out/production/War/main/UI.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..25a8dfd44e767688d154f2270dea27a0d13904c8
+GIT binary patch
+literal 1322
+zc${rh+fvg|6kP`jX=7+hxd{k@DE5NXyJC@wK(SgbQYgaPp#%tq1VReKvp?c5;BXtA
+z@dNxQ$9+yiX~E7k$-bPu)?Ry`KYxGz1~7^h6?Ldr;M356MuzY<Kj2A|Tbs$bwQarV
+zGBl1Fmf?;u)JJ250Q?9jP&M3w#-QwQ!%8k?8R|B7>2yxo(|kvt=az1!6a*QXWKDkP
+zCNs9>`VnSm7<UYAs%Sz)0Jku7L~~crdDk(l%~Up925i&Njt)A-#VLkRuBKv2MJKux
+zbZfYS9){*hblTy&TSjr8i0<pI$YqE`ubmbcchRSyU&B2NFa#^{3EQ+CYJ6d8QZ!fV
+zm#_~s4B{b!pXz(rEz#?V0wIRDf`o=4JR*cznMmVZlOO4hXic|V!#zsQOGhezBpxex
+zqTwl?k(4!22A^qc=nO2Y;sstRc%|VrMry`b){+!B;ATmm+hAymW@9(SR*}M}g0~vR
+zkiHbL<Qk^82qa?A(f3M*qtDvbY{?|rgVjSTr=?;yT|%gF4e!OA)pds-mLXLd?WBe&
+zWEeEz7J|$jh`!pZG`t+5C*ubVS$rfiHf4$vd6&B-V#ikf$T0+jug{ic81>!qpGtB_
+z*H$%FAUP-ObzKa>u=Lr|&YJEl@->q@k(^!RW<l&9*`CwqZW)9d$a$B5%KAhbG$!Iy
+z{5r#Ty-YQ4mz<)WF@&KkWrqbN^i%(JbPMb0Px}q=o58Gn)9sQGT6)aUbDpeKG|K$0
+z_&HcSaSA2=3r#DLP<^=f9L=X_J*H?KKGQP-pRD4eIsv+7od{w<;>ZffV^QLCNhDGV
+zOUQUQ-w0D=r4#WJw4UL1;s<)qa9^0p38E($zQFTvK$sVJvmEZ+YN+}?!@GFm3=>ym
+z+Nq$R<VOoaXvGNHXvx~E2&F58(ozCJXsSYJ&m%NcCNS;$j)6qvQ&_1&4Towe9838G
+fdQb}7NsV?Rfu1VVp$h7dhgv9$o}kZVN&m|~`{@*0
+
+diff --git a/res/bomb/Bomb.png b/res/bomb/Bomb.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..35efedccaa8535108cffc9c59b165ff73401504b
+GIT binary patch
+literal 924
+zc$@*817rM&P)<h;3K|Lk000e1NJLTq003kF003kN1^@s6aN?Cz00001b5ch_0Itp)
+z=>Px&R!KxbRCr$P-Jz1zKoAAcUC&QoDKr9uK%x+MJ^+hEA^8dZ0EI+g(G-@Sz(a+4
+zsSVjjre~)6_MORHJ;@~ZO!p+O_U+!@=!YtSTdJ$k#oSPWyngrLcZAKy_irihcYCkU
+z3yccd3y%RzARA4Acr9(G^9aN#NYB$`qo`%=G^Yk(-^8y~mKCJ;-u^dFu|j$$_G~9v
+z=UT$^%;5;V2(pIYc|lphGR#}5Kr_g4GeYSjEnzHYuL2QD8;AvBJ##gPQ0h=>Fq$ev
+zdx{;T7NZM9Fvl=07%m`cVfSHLG2B2@Eq5qA815ivhv~%-h<$%9j`Y9?13A;a;sw$5
+z9#UK`n*lSw-Fst%R>&4@MwAE)fz*`xWo#4#tYyve<P{A82U#b4_VRPculO`9_P>Wb
+zeEg$$C<+7CvaanXKfgaJ2GKiU4ZCHo<ya&{T7_61iCY5f#oHeL_0x-{Pr*H|A!TBQ
+zr>;HvT1^>Mv4uP>$hFm+jghj4SX!1x>9?FiAT6l{9wU&za9d721qj0i-4gz^d&o>6
+zHLy|D<noktMigog<|n6`RbMlf9%Pme5iKZD7-8=rGq<ovj4+T{TUazkD9B7G2nfih
+zy|c8gX+UPE5+p`=%NiX7jR64}6(s`$1~M8-76ue#Bou*IUXMXzGBH#kJLGH(I0$>&
+z5(uabS*H<*H7U?Ifq;UxP9qR&QlN1H0R?THMj+OtK;r}g3fel2K&(lD#t8%zv~?PR
+zSd#*cJ0%G7$0q^-t$gb=0<k6q8Yd7?(AH@LVoeG(P9UJ5t<wm^niOc9KtMrTr#USM
+z>$`|RtV<U(P9UJ5t<wm^niOc<sX-X`5rG8#d%V_y5{N+VtsR%|skf|1wr^K4RL7EI
+z8VK7SA`r6w*dq`k5Ecxztjp#nkV_CO8@oU*AithJIs6;GZ=Swtd4Q`vMj)HWN+{Lo
+zRvz%+%eT}g&Hd%3UQ9N|5{5u_OClRZAObmTs;Mn&xiVGAzdq?8*(hpRR|+<(O4u;c
+z-_%!|3=l>PfmFV;AcmiI4^f32EHAaJyKpEf1pTDNS{*cd2y%00#-Ia<t`v3*N{}d&
+y5in>$yj$2P81x_>)iM&s5FkC(G8)EmuYUla$DMQ*&#IIF0000<MNUMnLSTYMyMbW<
+

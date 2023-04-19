@@ -3,8 +3,6 @@ package main;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.UnsupportedAudioFileException;
-import java.io.IOException;
 import java.net.URL;
 
 public class soundThread extends Thread{
@@ -24,9 +22,7 @@ public class soundThread extends Thread{
     @Override
     public void run()
     {
-        setFile(0);
-        play();
-        loop();
+       playMusic();
     }
     public void setFile(int i)
     {
@@ -45,8 +41,17 @@ public class soundThread extends Thread{
     {
         clip.loop(Clip.LOOP_CONTINUOUSLY);
     }
-//    public void stop()
-//    {
-//        clip.stop();
-//    }
+
+    public void playMusic()
+    {
+        setFile(0);
+        play();
+        loop();
+    }
+    public void playSoundEffect(int i)
+    {
+        setFile(i);
+        play();
+    }
+
 }
