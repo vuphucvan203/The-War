@@ -23,7 +23,6 @@ public class GamePanel extends JPanel implements Runnable{
     public int resetGameState = 4;
     public int quitGameState = 5;
     public boolean save = false;
-    public boolean gameDiary = false;
 
 
 
