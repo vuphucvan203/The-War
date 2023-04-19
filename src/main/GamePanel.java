@@ -40,9 +40,8 @@ public class GamePanel extends JPanel implements Runnable{
     public Database data = new Database(this);
     public soundThread sound = new soundThread();
     public Background background = new Background(this);
-
-    public ArrayList<Entity> listEntity = new ArrayList<Entity>();
     public Items items = new Items(this);
+    public ArrayList<Entity> listEntity = new ArrayList<Entity>();
 
     public GamePanel()
     {
