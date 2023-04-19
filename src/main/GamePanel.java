@@ -49,7 +49,6 @@ public class GamePanel extends JPanel implements Runnable{
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
-        this.setDoubleBuffered(true);
         this.addKeyListener(getKey);
         this.setFocusable(true);
         this.setupGame();
@@ -190,10 +189,6 @@ public class GamePanel extends JPanel implements Runnable{
             drawBomb(g);
             items.drawItems(g);
             ui.draw(g);
-        }
-        if(gameDiary == true)
-        {
-
         }
     }
     public void drawBomb(Graphics g)
