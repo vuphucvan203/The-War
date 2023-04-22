@@ -37,6 +37,7 @@ public class GamePanel extends JPanel implements Runnable{
     public LimitLeftScreen leftScreen = new LimitLeftScreen(this);
     public LimitRightScreen rightScreen = new LimitRightScreen(this);
     public LimitBottomScreen bottomScreen = new LimitBottomScreen(this);
+
     public UI ui = new UI(this);
     public Database data = new Database(this);
     public soundThread sound = new soundThread();
