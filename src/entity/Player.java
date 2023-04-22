@@ -1,6 +1,7 @@
 package entity;
 import main.GamePanel;
 import main.GetKey;
+import main.GetMouse;
 
 
 import javax.imageio.ImageIO;
@@ -10,8 +11,8 @@ import java.io.IOException;
 
 public class Player extends Entity{
 
-    GetKey getkey;
-
+//    GetKey getkey;
+    GetMouse getMouse;
     Rectangle solidArea = new Rectangle();
 
     GamePanel gp;
@@ -23,6 +24,35 @@ public class Player extends Entity{
     private BufferedImage imagePlayer, imageInjured;
     private int delayCount = 0;
     private boolean moveRight, moveLeft;
+    private boolean mouseRight, mouseLeft;
+
+    public boolean isMouseRight() {
+        return mouseRight;
+    }
+
+    public void setMouseRight(boolean mouseRight) {
+        this.mouseRight = mouseRight;
+    }
+
+    public boolean isMouseLeft() {
+        return mouseLeft;
+    }
+
+    public void setMouseLeft(boolean mouseLeft) {
+        this.mouseLeft = mouseLeft;
+    }
+
+    private String direction = "";
+    private boolean move = false;
+
+
+    public boolean isMove() {
+        return move;
+    }
+
+    public void setMove(boolean move) {
+        this.move = move;
+    }
 
     public boolean isMoveRight() {
         return moveRight;
@@ -57,16 +87,14 @@ public class Player extends Entity{
     public void setDelay(boolean delay) {
         this.delay = delay;
     }
-    
+
     public int getDelayCount() {
         return delayCount;
     }
-    
+
     public void setDelayCount(int delayCount) {
         this.delayCount = delayCount;
     }
-
-    private String direction = "";
 
     public boolean isInjured() {
         return injured;
@@ -101,11 +129,11 @@ public class Player extends Entity{
     }
     
 
-    public Player(GamePanel gp, GetKey gk)
+    public Player(GamePanel gp, GetMouse gm)
     {
         super(gp);
         this.gp = gp;
-        this.getkey = gk;
+        this.getMouse = gm;
         setSolidArea();
         getImagePlayer();
         setDefaultVale();
@@ -138,7 +166,7 @@ public class Player extends Entity{
     {
         setPositionX(gp.unitSize * 9);
         setPositionY(gp.unitSize * 28);
-        setSpeed(gp.unitSize/5);
+        setSpeed(gp.unitSize/ 5);
     }
 
     public void setSolidArea()
@@ -188,6 +216,20 @@ public class Player extends Entity{
                     case "right": setPositionX(getPositionX() + getSpeed()); break;
                 }
             }
+
+            //Take items
+            if(takeItems == true)
+            {
+                gp.player.score += 1;
+                gp.sound.playSoundEffect(3);
+                gp.items.createItems();
+                takeItems = false;
+            }
+        }
+        if(move == true)
+        {
+            //Check collision
+            boolean takeItems = gp.checkCollision.checkItems();
 
             //Take items
             if(takeItems == true)

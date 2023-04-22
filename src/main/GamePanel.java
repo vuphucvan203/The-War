@@ -23,7 +23,6 @@ public class GamePanel extends JPanel implements Runnable{
     public int resetGameState = 4;
     public int quitGameState = 5;
     public boolean save = false;
-    public boolean gameDiary = false;
 
 
 
@@ -31,9 +30,10 @@ public class GamePanel extends JPanel implements Runnable{
     Thread gameThread;
 
     GetKey getKey = new GetKey(this);
+    GetMouse getMouse = new GetMouse(this);
     public CheckCollision checkCollision = new CheckCollision(this);
     BombManager bombManager = new BombManager(this);
-    public Player player = new Player(this, getKey);
+    public Player player = new Player(this, getMouse);
     public LimitLeftScreen leftScreen = new LimitLeftScreen(this);
     public LimitRightScreen rightScreen = new LimitRightScreen(this);
     public LimitBottomScreen bottomScreen = new LimitBottomScreen(this);
@@ -50,8 +50,9 @@ public class GamePanel extends JPanel implements Runnable{
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
-        this.setDoubleBuffered(true);
         this.addKeyListener(getKey);
+        this.addMouseListener(getMouse);
+        this.addMouseMotionListener(getMouse);
         this.setFocusable(true);
         this.setupGame();
         this.startGameThread();
@@ -142,6 +143,7 @@ public class GamePanel extends JPanel implements Runnable{
                 System.out.println("FPS: "+drawCount);
                 drawCount = 0;
                 timer = 0;
+                System.out.println(GetMouse.mouseX + " " + GetMouse.mouseY);
             }
         }
     }
@@ -180,6 +182,7 @@ public class GamePanel extends JPanel implements Runnable{
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
+
         background.drawBackground(g);
         if(gameState == menuGameState)
         {
@@ -192,10 +195,7 @@ public class GamePanel extends JPanel implements Runnable{
             items.drawItems(g);
             ui.draw(g);
         }
-        if(gameDiary == true)
-        {
-
-        }
+//        draw(g);
     }
     public void drawBomb(Graphics g)
     {
@@ -203,5 +203,15 @@ public class GamePanel extends JPanel implements Runnable{
         {
             if(listEntity.get(i) != null) listEntity.get(i).draw(g);
         }
+    }
+    public void draw(Graphics g)
+    {
+        for(int i = 0; i < screenHeight/ unitSize; i++)
+        {
+            g.drawLine(i * unitSize, 0, i * unitSize, screenHeight);
+            g.drawLine(0, i * unitSize, screenWidth, i * unitSize);
+        }
+
+
     }
 }

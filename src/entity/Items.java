@@ -37,7 +37,7 @@ public class Items extends Entity{
 
     public void createItems()
     {
-        setPositionX(random.nextInt(19) * gp.unitSize);
+        setPositionX(random.nextInt(20) * gp.unitSize);
     }
     public void getImageItems()
     {

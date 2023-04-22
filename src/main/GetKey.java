@@ -25,70 +25,63 @@ public class GetKey implements KeyListener {
         if(code == KeyEvent.VK_D || code == KeyEvent.VK_RIGHT) gp.player.setMoveRight(true);
 
         //Menu state
-        if(gp.gameState == gp.menuGameState)
-        {
-            if(code == KeyEvent.VK_UP)
-            {
-                gp.ui.setFlagNum(gp.ui.getFlagNum() - 1);
-                if(gp.ui.getFlagNum() < 0)
-                {
-                    gp.ui.setFlagNum(1);
-                }
-            }
-            if(code == KeyEvent.VK_DOWN)
-            {
-                gp.ui.setFlagNum(gp.ui.getFlagNum() + 1);
-                if(gp.ui.getFlagNum() > 1)
-                {
-                    gp.ui.setFlagNum(0);
-                }
-            }
-            if(code == KeyEvent.VK_ENTER)
-            {
-                if(gp.ui.getFlagNum() == 0) gp.gameState = gp.playGameState;
-                if(gp.ui.getFlagNum() == 1) gp.gameState = gp.quitGameState;
-            }
-        }
+//        if(gp.gameState == gp.menuGameState)
+//        {
+//            if(code == KeyEvent.VK_UP)
+//            {
+//                gp.ui.setFlagNum(gp.ui.getFlagNum() - 1);
+//                if(gp.ui.getFlagNum() < 0)
+//                {
+//                    gp.ui.setFlagNum(1);
+//                }
+//            }
+//            if(code == KeyEvent.VK_DOWN)
+//            {
+//                gp.ui.setFlagNum(gp.ui.getFlagNum() + 1);
+//                if(gp.ui.getFlagNum() > 1)
+//                {
+//                    gp.ui.setFlagNum(0);
+//                }
+//            }
+//            if(code == KeyEvent.VK_ENTER)
+//            {
+//                if(gp.ui.getFlagNum() == 0) gp.gameState = gp.playGameState;
+//                if(gp.ui.getFlagNum() == 1) gp.gameState = gp.quitGameState;
+//            }
+//        }
 
         //Pause state
         if(code == KeyEvent.VK_P )
         {
-            if(gp.gameState == gp.playGameState)
-            {
-                gp.gameState = gp.pauseGameState;
-            }
-            else if(gp.gameState == gp.pauseGameState)
-            {
-                gp.gameState = gp.playGameState;
-            }
+            gp.gameState = gp.pauseGameState;
         }
 
         //Over game state
-        if(gp.gameState == gp.overGameState)
-        {
-            if(code == KeyEvent.VK_UP)
-            {
-                gp.ui.setFlagNum(gp.ui.getFlagNum() - 1);
-                if(gp.ui.getFlagNum() < 0)
-                {
-                    gp.ui.setFlagNum(2);
-                }
-            }
-            if(code == KeyEvent.VK_DOWN)
-            {
-                gp.ui.setFlagNum(gp.ui.getFlagNum() + 1);
-                if(gp.ui.getFlagNum() > 2)
-                {
-                    gp.ui.setFlagNum(0);
-                }
-            }
-            if(code == KeyEvent.VK_ENTER)
-            {
-                if(gp.ui.getFlagNum() == 0) gp.save = true;
-                if(gp.ui.getFlagNum() == 1) gp.gameState = gp.resetGameState;
-                if(gp.ui.getFlagNum() == 2) gp.gameState = gp.quitGameState;
-            }
-        }
+//        if(gp.gameState == gp.overGameState)
+//        {
+//            if(code == KeyEvent.VK_UP)
+//            {
+//                gp.ui.setFlagNum(gp.ui.getFlagNum() - 1);
+//                if(gp.ui.getFlagNum() < 0)
+//                {
+//                    gp.ui.setFlagNum(2);
+//                }
+//            }
+//            if(code == KeyEvent.VK_DOWN)
+//            {
+//                gp.ui.setFlagNum(gp.ui.getFlagNum() + 1);
+//                if(gp.ui.getFlagNum() > 2)
+//                {
+//                    gp.ui.setFlagNum(0);
+//                }
+//            }
+//            if(code == KeyEvent.VK_ENTER)
+//            {
+//                if(gp.ui.getFlagNum() == 0) gp.save = true;
+//                if(gp.ui.getFlagNum() == 1) gp.gameState = gp.resetGameState;
+//                if(gp.ui.getFlagNum() == 2) gp.gameState = gp.quitGameState;
+//            }
+//        }
     }
 
     @Override

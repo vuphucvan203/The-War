@@ -29,6 +29,8 @@ public class Entity {
         return name;
     }
 
+    private boolean collision = false;
+
     public void setName(String name) {
         this.name = name;
     }
@@ -60,8 +62,6 @@ public class Entity {
     public void setCollision(boolean collision) {
         this.collision = collision;
     }
-
-    private boolean collision = false;
     Bomb bomb;
 
     public void setPositionX(int positionX) {
@@ -96,6 +96,6 @@ public class Entity {
     }
     public void draw(Graphics g)
     {
-        bomb.draw(g);
+//        bomb.draw(g);
     }
 }

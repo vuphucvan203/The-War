@@ -61,17 +61,17 @@ public class UI {
         //String Play
         g.setFont(arial30);
         g.drawString(play, getXTextCenter(play,g), gp.unitSize * 14);
-        if(flagNum == 0)
-        {
-            g.drawString(">", getXTextCenter(play, g) - gp.unitSize, gp.unitSize * 14);
-        }
+//        if(flagNum == 0)
+//        {
+//            g.drawString(">", getXTextCenter(play, g) - gp.unitSize, gp.unitSize * 14);
+//        }
 
         //String Quit
         g.drawString(quit, getXTextCenter(quit, g), gp.unitSize * 16);
-        if(flagNum == 1)
-        {
-            g.drawString(">", getXTextCenter(quit, g) - gp.unitSize, gp.unitSize * 16);
-        }
+//        if(flagNum == 1)
+//        {
+//            g.drawString(">", getXTextCenter(quit, g) - gp.unitSize, gp.unitSize * 16);
+//        }
     }
 
     public  void drawPlayerIndex(Graphics g)
@@ -91,18 +91,22 @@ public class UI {
     public void drawPauseGame(Graphics g)
     {
         String pause = "Pause";
-        String continuePlay = "P to continue";
+        String continuePlay = "Continue";
+        String quitGame = "Quit";
         g.setColor(new Color(100,100,100,150));
         g.fillRect(0,0, gp.screenWidth,gp.screenHeight);
 
         //Draw pause game
         g.setFont(arial50);
         g.setColor(Color.WHITE);
-        g.drawString(pause, getXTextCenter(pause, g), gp.screenHeight / 2);
+        g.drawString(pause, getXTextCenter(pause, g), gp.screenHeight / 2 - gp.unitSize * 2);
 
         //Draw continue game
-        g.setFont(arial20);
-        g.drawString(continuePlay, getXTextCenter(continuePlay, g), gp.unitSize * 17);
+        g.setFont(arial30);
+        g.drawString(continuePlay, getXTextCenter(continuePlay, g), gp.unitSize * 15);
+
+        //Draw quit game
+        g.drawString(quitGame, getXTextCenter(quitGame, g), gp.unitSize * 17);
     }
     public void drawGameOver(Graphics g)
     {
@@ -128,24 +132,24 @@ public class UI {
         //Draw save game
         g.setFont(arial30);
         g.drawString(save, getXTextCenter(save, g), gp.unitSize * 16);
-        if(flagNum == 0)
-        {
-            g.drawString(">", getXTextCenter(save, g) - gp.unitSize * 2, gp.unitSize * 16);
-        }
+//        if(flagNum == 0)
+//        {
+//            g.drawString(">", getXTextCenter(save, g) - gp.unitSize * 2, gp.unitSize * 16);
+//        }
 
         //Draw reset game
         g.drawString(reset, getXTextCenter(reset, g), gp.unitSize * 18);
-        if(flagNum == 1)
-        {
-            g.drawString(">", getXTextCenter(reset, g) - gp.unitSize, gp.unitSize * 18);
-        }
+//        if(flagNum == 1)
+//        {
+//            g.drawString(">", getXTextCenter(reset, g) - gp.unitSize, gp.unitSize * 18);
+//        }
 
         //Draw quit
         g.drawString(quit, getXTextCenter(quit, g), gp.unitSize * 20);
-        if(flagNum == 2)
-        {
-            g.drawString(">", getXTextCenter(quit, g) - gp.unitSize, gp.unitSize * 20);
-        }
+//        if(flagNum == 2)
+//        {
+//            g.drawString(">", getXTextCenter(quit, g) - gp.unitSize, gp.unitSize * 20);
+//        }
     }
 
     public int  getXTextCenter(String text, Graphics g)

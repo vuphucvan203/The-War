@@ -25,9 +25,9 @@ public class LimitLeftScreen extends Entity{
 
     private void setSolidArea()
     {
-        solidArea.x = 5;
+        solidArea.x = 0;
         solidArea.y = 0;
-        solidArea.width = 1;
+        solidArea.width = 5;
         solidArea.height = gp.screenHeight;
     }
 
