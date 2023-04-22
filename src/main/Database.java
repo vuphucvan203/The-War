@@ -83,7 +83,7 @@ public class Database {
     public void exportToFile() throws SQLException, ClassNotFoundException, IOException {
         String data = null;
         String no, score, date;
-        String path = "C:\\Users\\ADMIN ACER\\Downloads\\The-War-main\\The-War-main\\savegame\\data";
+        String path = "data.txt";
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
 
