@@ -104,22 +104,16 @@ public class GetMouse implements MouseListener, MouseMotionListener, MouseInputL
     public void mouseMoved(MouseEvent e) {
        mouseX = e.getX();
        mouseY = e.getY();
-
+       gp.player.setMove(true);
        if(gp.gameState == gp.playGameState)
        {
            if(mouseX < gp.player.getPositionX() + gp.unitSize * 2 - gp.unitSize / 2)
            {
-               gp.player.setMove(true);
                gp.player.setPositionX(gp.player.getPositionX() - gp.player.getSpeed());
            }
            if(mouseX > gp.player.getPositionX() + gp.unitSize / 2)
            {
-               gp.player.setMove(true);
                gp.player.setPositionX(gp.player.getPositionX() + gp.player.getSpeed());
-           }
-           if(mouseX == gp.player.getPositionX())
-           {
-               gp.player.setMove(false);
            }
        }
     }

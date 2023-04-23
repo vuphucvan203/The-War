@@ -144,7 +144,6 @@ public class GamePanel extends JPanel implements Runnable{
                 System.out.println("FPS: "+drawCount);
                 drawCount = 0;
                 timer = 0;
-                System.out.println(GetMouse.mouseX + " " + GetMouse.mouseY);
             }
         }
     }
