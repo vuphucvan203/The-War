@@ -23,50 +23,60 @@ public class GetMouse implements MouseListener, MouseMotionListener, MouseInputL
 
         /* Menu game */
 
-        // Play button
-        if(mouseX >= gp.unitSize * 9 && mouseX <= gp.unitSize * 11 && mouseY >= gp.unitSize * 13 && mouseY <= gp.unitSize * 14)
+        if(gp.gameState == gp.menuGameState)
         {
-            gp.gameState = gp.playGameState;
+            // Play button
+            if(mouseX >= gp.unitSize * 9 && mouseX <= gp.unitSize * 11 && mouseY >= gp.unitSize * 13 && mouseY <= gp.unitSize * 14)
+            {
+                gp.gameState = gp.playGameState;
+            }
+
+            // Quit button
+            if(mouseX >= gp.unitSize * 9 && mouseX <= gp.unitSize * 11 && mouseY >= gp.unitSize * 15 && mouseY <= gp.unitSize * 16)
+            {
+                gp.gameState = gp.quitGameState;
+            }
         }
 
-        // Quit button
-        if(mouseX >= gp.unitSize * 9 && mouseX <= gp.unitSize * 11 && mouseY >= gp.unitSize * 15 && mouseY <= gp.unitSize * 16)
-        {
-            gp.gameState = gp.quitGameState;
-        }
 
         /* Over game */
 
-        // Reset button
-        if(mouseX >= gp.unitSize * 7 && mouseX <= gp.unitSize * 13 && mouseY >= gp.unitSize * 15 && mouseY <= gp.unitSize * 16)
+        if(gp.gameState == gp.overGameState)
         {
-            gp.save = true;
+            // Reset button
+            if(mouseX >= gp.unitSize * 7 && mouseX <= gp.unitSize * 13 && mouseY >= gp.unitSize * 15 && mouseY <= gp.unitSize * 16)
+            {
+                gp.save = true;
+            }
+
+            // Save button
+            if(mouseX >= gp.unitSize * 7 && mouseX <= gp.unitSize * 13 && mouseY >= gp.unitSize * 17 && mouseY <= gp.unitSize * 18)
+            {
+                gp.gameState = gp.resetGameState;
+            }
+            // Quit button
+            if(mouseX >= gp.unitSize * 9 && mouseX <= gp.unitSize * 11 && mouseY >= gp.unitSize * 19 && mouseY <= gp.unitSize * 20)
+            {
+                gp.gameState = gp.quitGameState;
+            }
         }
 
-        // Save button
-        if(mouseX >= gp.unitSize * 7 && mouseX <= gp.unitSize * 13 && mouseY >= gp.unitSize * 17 && mouseY <= gp.unitSize * 18)
-        {
-            gp.gameState = gp.resetGameState;
-        }
-
-        // Quit button
-        if(mouseX >= gp.unitSize * 9 && mouseX <= gp.unitSize * 11 && mouseY >= gp.unitSize * 19 && mouseY <= gp.unitSize * 20)
-        {
-            gp.gameState = gp.quitGameState;
-        }
 
        /* Pause */
 
-        // continue button
-        if(mouseX >= gp.unitSize * 8 && mouseX <= gp.unitSize * 12 && mouseY >= gp.unitSize * 14 && mouseY <= gp.unitSize * 15)
+        if(gp.gameState == gp.pauseGameState)
         {
-            gp.gameState = gp.playGameState;
-        }
+            // continue button
+            if(mouseX >= gp.unitSize * 8 && mouseX <= gp.unitSize * 12 && mouseY >= gp.unitSize * 14 && mouseY <= gp.unitSize * 15)
+            {
+                gp.gameState = gp.playGameState;
+            }
 
-        // Quit button
-        if(mouseX >= gp.unitSize * 10 && mouseX <= gp.unitSize * 12 && mouseY >= gp.unitSize * 16 && mouseY <= gp.unitSize * 17)
-        {
-            gp.gameState = gp.quitGameState;
+            // Quit button
+            if(mouseX >= gp.unitSize * 10 && mouseX <= gp.unitSize * 12 && mouseY >= gp.unitSize * 16 && mouseY <= gp.unitSize * 17)
+            {
+                gp.gameState = gp.quitGameState;
+            }
         }
     }
 
