@@ -21,7 +21,7 @@ public class Background {
     public void getImageBackground()
     {
         try {
-            imageBackground = ImageIO.read(getClass().getResourceAsStream("/background/background.png"));
+            imageBackground = ImageIO.read(getClass().getResourceAsStream("/background/Background.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

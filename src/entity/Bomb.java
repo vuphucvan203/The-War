@@ -49,8 +49,8 @@ public class Bomb extends Entity{
     public void getImageBomb()
     {
         try {
-            imageBomb = ImageIO.read(getClass().getResourceAsStream("/weapon/bomb.png"));
-            imageExplode = ImageIO.read(getClass().getResourceAsStream("/weapon/bombExplode.png"));
+            imageBomb = ImageIO.read(getClass().getResourceAsStream("/weapon/Bomb.png"));
+            imageExplode = ImageIO.read(getClass().getResourceAsStream("/weapon/BombExplode.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

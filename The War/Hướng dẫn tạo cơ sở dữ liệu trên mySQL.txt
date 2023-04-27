@@ -1,0 +1,15 @@
+Các bước tạo cơ sở dữ liệu cho game The War
+
+Bước 1: Vào XAMPP để start Apache, MySQL rồi truy cập http://localhost/phpmyadmin/
+
+Bước 2: Tạo cơ sở dữ liệu, bảng và cột
+	+ Database name: thewar
+	+ Table name: gamediary
+	+ Number of columns: 3 
+Bước 3: Tạo chi tiết từng cột
+Cột	Name	Type	
+ 1	 No 	INT
+ 2 	Score	INT
+ 3	Date	DateTime
+	
+	
